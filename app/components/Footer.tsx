@@ -31,12 +31,6 @@ const Footer = () => {
     ],
   };
 
-  const socialLinks = [
-    { href: '#', label: 'Twitter' },
-    { href: '#', label: 'LinkedIn' },
-    { href: '#', label: 'GitHub' },
-    { href: 'mailto:hello@tably.site', label: 'Email' },
-  ];
 
   return (
     <footer className="relative bg-plum-950 text-white overflow-hidden">
@@ -59,19 +53,6 @@ const Footer = () => {
             <p className="text-charcoal-300 text-sm mb-6 leading-relaxed">
               Modern restaurant operations platform.
             </p>
-            <div className="flex flex-wrap gap-2">
-              {socialLinks.map((social) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  whileHover={{ scale: 1.05 }}
-                  className="text-charcoal-400 hover:text-plum-300 hover:bg-plum-800/40 transition-all text-sm px-3 py-1.5 rounded-lg"
-                  aria-label={social.label}
-                >
-                  {social.label}
-                </motion.a>
-              ))}
-            </div>
           </div>
 
           {/* Product */}

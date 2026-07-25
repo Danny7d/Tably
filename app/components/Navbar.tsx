@@ -76,7 +76,7 @@ const Navbar = () => {
               Login
             </Link>
             <Link
-              href="/login"
+              href="https://app.tably.site"
               className="bg-gradient-button text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow-glow-plum/30 hover:shadow-glow-plum hover:-translate-y-0.5 transition-all duration-300"
             >
               Start Free
@@ -133,7 +133,7 @@ const Navbar = () => {
                   Login
                 </Link>
                 <Link
-                  href="/login"
+                  href="https://app.tably.site"
                   onClick={() => setIsOpen(false)}
                   className="block bg-gradient-button text-white px-6 py-3.5 rounded-xl text-center font-semibold shadow-glow-plum/30 transition-all duration-300"
                 >

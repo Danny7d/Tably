@@ -18,10 +18,29 @@ export default function Contact() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission
+    
+    // Store the message
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', company: '', message: '' });
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Failed to send message. Please try again.');
+    }
   };
 
   return (
@@ -79,7 +98,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-charcoal-900 mb-1 font-heading text-sm uppercase tracking-wider">Email</h3>
-                    <p className="text-charcoal-500 text-[0.9375rem]">hello@tably.site</p>
+                    <p className="text-charcoal-500 text-[0.9375rem]">contact@tably.site</p>
                     <p className="text-charcoal-400 text-xs">support@tably.site</p>
                   </div>
                 </div>

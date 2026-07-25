@@ -9,7 +9,7 @@ const Hero = () => {
     <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden noise-bg">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-hero" />
-      
+
       {/* Floating blobs */}
       <div className="blob bg-plum-400 w-[28rem] h-[28rem] top-16 -right-48 animate-blob" />
       <div className="blob bg-plum-300 w-[22rem] h-[22rem] bottom-20 -left-40 animate-blob" style={{ animationDelay: '3s' }} />
@@ -49,8 +49,8 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="text-lg lg:text-xl text-charcoal-400 mb-11 max-w-2xl mx-auto leading-relaxed"
           >
-            Tably is the modern operations platform that helps restaurants streamline ordering, 
-            manage staff, and track analytics—all in one place.
+            Tably is the modern operations platform that helps restaurants streamline ordering,
+            manage staff, and track analytics. All in one place.
           </motion.p>
 
           <motion.div
@@ -74,7 +74,7 @@ const Hero = () => {
         >
           {/* Glow behind mockup */}
           <div className="absolute inset-x-10 -inset-y-6 bg-plum-400/10 rounded-[2rem] blur-3xl" />
-          
+
           <div className="relative glass rounded-3xl shadow-elevated border border-cream-300/50 overflow-hidden">
             {/* Browser chrome */}
             <div className="bg-cream-100 border-b border-cream-300/60 px-5 py-3.5 flex items-center gap-2">
@@ -85,7 +85,7 @@ const Hero = () => {
                 <div className="h-5 bg-cream-200 rounded-lg" />
               </div>
             </div>
-            
+
             {/* Dashboard content */}
             <div className="p-5 lg:p-7 bg-gradient-to-br from-white to-cream-100">
               <div className="grid grid-cols-3 gap-4 mb-6">
@@ -99,7 +99,7 @@ const Hero = () => {
                 </div>
                 <div className="bg-white p-4 lg:p-5 rounded-2xl shadow-soft border border-cream-300/40">
                   <div className="text-xs font-medium text-charcoal-400 mb-1.5">Revenue</div>
-                  <div className="text-2xl font-bold text-charcoal-900">$8,420</div>
+                  <div className="text-2xl font-bold text-charcoal-900">429,420 ETB</div>
                   <div className="text-xs font-medium text-sage-600 mt-1.5 flex items-center gap-1">
                     <span className="inline-block w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[5px] border-b-sage-500" />
                     +8% from yesterday
@@ -125,7 +125,7 @@ const Hero = () => {
                           <div className="text-xs text-charcoal-400">Order #{1000 + i}</div>
                         </div>
                       </div>
-                      <div className="text-sm font-semibold text-charcoal-900">${(i * 15.99).toFixed(2)}</div>
+                      <div className="text-sm font-semibold text-charcoal-900">{(i * 815).toLocaleString()} ETB</div>
                     </div>
                   ))}
                 </div>

@@ -113,32 +113,6 @@ export default function Home() {
       
       <Hero />
 
-      {/* Trusted By */}
-      <Section background="ivory" className="py-12 lg:py-16 border-y border-cream-300/40 relative overflow-hidden">
-        <Container>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center relative z-10"
-          >
-            <p className="text-xs font-semibold text-charcoal-400 uppercase tracking-widest mb-8">
-              Trusted by modern restaurants
-            </p>
-            <div className="flex flex-wrap justify-center items-center gap-6 md:gap-14">
-              {['Restaurant A', 'Restaurant B', 'Restaurant C', 'Restaurant D', 'Restaurant E'].map((name, i) => (
-                <div 
-                  key={i} 
-                  className="px-6 py-3 rounded-2xl bg-cream-50 border border-cream-300/40 text-sm font-bold text-charcoal-500 shadow-soft hover:shadow-card hover:border-plum-200/50 hover:text-plum-600 transition-all duration-300 cursor-default"
-                >
-                  {name}
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </Container>
-      </Section>
-
       {/* Features */}
       <Section background="white" className="relative overflow-hidden">
         {/* Glow decorative element */}
@@ -249,8 +223,8 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
             {[
-              { name: 'Starter', price: '$49', description: 'Perfect for small restaurants', features: ['1 Location', 'Up to 50 orders/day', 'Basic analytics', 'Email support'] },
-              { name: 'Growth', price: '$149', description: 'For growing restaurants', popular: true, features: ['3 Locations', 'Unlimited orders', 'Advanced analytics', 'Priority support', 'Custom branding'] },
+              { name: 'Starter', price: '2,500 ETB', description: 'Perfect for small restaurants', features: ['1 Location', 'Up to 50 orders/day', 'Basic analytics', 'Email support'] },
+              { name: 'Growth', price: '7,500 ETB', description: 'For growing restaurants', popular: true, features: ['3 Locations', 'Unlimited orders', 'Advanced analytics', 'Priority support', 'Custom branding'] },
               { name: 'Enterprise', price: 'Custom', description: 'For restaurant groups', features: ['Unlimited locations', 'White-label solution', 'Dedicated account manager', 'Custom integrations', 'SLA guarantee'] },
             ].map((plan, index) => {
               const isPopular = plan.popular;
@@ -434,7 +408,7 @@ export default function Home() {
                 Join thousands of restaurants already using Tably to streamline their operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="secondary" size="lg" href="/login" className="bg-white text-plum-900 border-0 hover:bg-cream-100">
+                <Button variant="secondary" size="lg" href="https://app.tably.site" className="bg-white text-plum-900 border-0 hover:bg-cream-100">
                   Start Free
                 </Button>
               </div>

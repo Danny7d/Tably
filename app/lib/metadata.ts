@@ -7,6 +7,14 @@ export const siteMetadata: Metadata = {
   authors: [{ name: "Tably" }],
   creator: "Tably",
   publisher: "Tably",
+  icons: {
+    icon: [
+      {
+        url: "/favicon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+  },
   formatDetection: {
     email: false,
     address: false,

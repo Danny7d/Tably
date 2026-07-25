@@ -16,8 +16,8 @@ export default function Pricing() {
   const plans = [
     {
       name: 'Starter',
-      monthlyPrice: 49,
-      annualPrice: 39,
+      monthlyPrice: 2500,
+      annualPrice: 2000,
       description: 'Perfect for small restaurants',
       features: [
         '1 Location',
@@ -31,8 +31,8 @@ export default function Pricing() {
     },
     {
       name: 'Growth',
-      monthlyPrice: 149,
-      annualPrice: 119,
+      monthlyPrice: 7500,
+      annualPrice: 6000,
       description: 'For growing restaurants',
       popular: true,
       features: [
@@ -49,8 +49,8 @@ export default function Pricing() {
     },
     {
       name: 'Enterprise',
-      monthlyPrice: 299,
-      annualPrice: 249,
+      monthlyPrice: null,
+      annualPrice: null,
       description: 'For restaurant groups',
       features: [
         'Unlimited locations',
@@ -132,6 +132,7 @@ export default function Pricing() {
             {plans.map((plan, index) => {
               const isPopular = plan.popular;
               const currentPrice = isAnnual ? plan.annualPrice : plan.monthlyPrice;
+              const isCustom = currentPrice === null;
               return (
                 <motion.div
                   key={plan.name}
@@ -154,14 +155,22 @@ export default function Pricing() {
                       <h3 className="text-2xl font-extrabold text-charcoal-900 mb-2 font-heading">{plan.name}</h3>
                       <p className="text-charcoal-500 text-sm mb-6 leading-relaxed">{plan.description}</p>
                       <div className="mb-6">
-                        <span className="text-4xl font-extrabold text-charcoal-900 tracking-tight">
-                          ${currentPrice}
-                        </span>
-                        <span className="text-base font-normal text-charcoal-400">/month</span>
-                        {isAnnual && (
-                          <div className="text-xs font-semibold text-sage-600 mt-2 bg-sage-50 px-2.5 py-1 rounded-lg inline-block">
-                            Billed annually (${currentPrice * 12}/year)
-                          </div>
+                        {isCustom ? (
+                          <span className="text-4xl font-extrabold text-charcoal-900 tracking-tight">
+                            Custom
+                          </span>
+                        ) : (
+                          <>
+                            <span className="text-4xl font-extrabold text-charcoal-900 tracking-tight">
+                              {currentPrice!.toLocaleString()} ETB
+                            </span>
+                            <span className="text-base font-normal text-charcoal-400">/month</span>
+                            {isAnnual && (
+                              <div className="text-xs font-semibold text-sage-600 mt-2 bg-sage-50 px-2.5 py-1 rounded-lg inline-block">
+                                Billed annually ({(currentPrice! * 12).toLocaleString()} ETB/year)
+                              </div>
+                            )}
+                          </>
                         )}
                       </div>
                       <div className="w-full h-px bg-cream-300/60 mb-6" />
@@ -266,7 +275,7 @@ export default function Pricing() {
               <p className="text-lg text-cream-100/90 max-w-2xl mx-auto mb-10 leading-relaxed">
                 Start your free trial today and see the difference Tably can make.
               </p>
-              <Button variant="secondary" size="lg" href="/login" className="bg-white text-plum-900 border-0 hover:bg-cream-100">
+              <Button variant="secondary" size="lg" href="https://app.tably.site" className="bg-white text-plum-900 border-0 hover:bg-cream-100">
                 Start Free Trial
               </Button>
             </div>
