@@ -6,10 +6,10 @@ const CONTACTS_FILE = path.join(process.cwd(), 'data', 'contacts.json');
 
 export async function DELETE(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
     
     const contacts = JSON.parse(fs.readFileSync(CONTACTS_FILE, 'utf-8'));
     const filteredContacts = contacts.filter((msg: { id: string }) => msg.id !== id);
