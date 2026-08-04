@@ -8,6 +8,10 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/admin/', '/login'],
       },
+      {
+        userAgent: 'Googlebot-Image',
+        allow: '/',
+      },
     ],
     sitemap: 'https://tably.site/sitemap.xml',
   }

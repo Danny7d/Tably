@@ -10,10 +10,18 @@ export const siteMetadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/tably-favicon.png",
+        url: "https://tably.site/tably-favicon.png",
         type: "image/png",
+        sizes: "32x32",
+      },
+      {
+        url: "https://tably.site/tably-favicon.png",
+        type: "image/png",
+        sizes: "16x16",
       },
     ],
+    shortcut: "https://tably.site/tably-favicon.png",
+    apple: "https://tably.site/tably-favicon.png",
   },
   formatDetection: {
     email: false,
