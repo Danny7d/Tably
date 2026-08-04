@@ -14,20 +14,13 @@ const Footer = () => {
     company: [
       { name: 'About', href: '/about' },
       { name: 'Contact', href: '/contact' },
-      { name: 'Careers', href: '#' },
-      { name: 'Blog', href: '#' },
     ],
     resources: [
-      { name: 'Help Center', href: '#' },
       { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '#' },
-      { name: 'Status', href: '#' },
     ],
     legal: [
       { name: 'Privacy', href: '/privacy' },
       { name: 'Terms', href: '/terms' },
-      { name: 'Security', href: '#' },
-      { name: 'Cookies', href: '#' },
     ],
   };
 

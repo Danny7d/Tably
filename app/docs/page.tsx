@@ -7,9 +7,27 @@ import Footer from '../components/Footer';
 import Section from '../components/Section';
 import Container from '../components/Container';
 import Card from '../components/Card';
-import { BookOpen, Users, Utensils, BarChart3, Settings, LayoutDashboard, Search, ChevronRight } from 'lucide-react';
+import JsonLd from '../components/JsonLd';
+import { BookOpen, Users, Utensils, BarChart3, Settings, LayoutDashboard, Search } from 'lucide-react';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Tably Documentation',
+  url: 'https://tably.site/docs',
+  description: 'Documentation for Tably restaurant management platform',
+};
 
 export default function Docs() {
+  return (
+    <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+      <JsonLd data={jsonLd} />
+      <DocsContent />
+    </div>
+  );
+}
+
+function DocsContent() {
   const docSections = [
     {
       title: 'Getting Started',
@@ -145,16 +163,12 @@ export default function Docs() {
                       <ul className="space-y-4">
                         {section.articles.map((article) => (
                           <li key={article.title}>
-                            <Link
-                              href="#"
-                              className="group block transition-all"
-                            >
-                              <div className="font-bold text-sm text-charcoal-800 group-hover:text-plum-600 flex items-center gap-1 transition-colors">
+                            <div className="group block transition-all">
+                              <div className="font-bold text-sm text-charcoal-800 flex items-center gap-1 transition-colors">
                                 {article.title}
-                                <ChevronRight size={14} className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-plum-500" />
                               </div>
                               <div className="text-xs text-charcoal-400 mt-1 leading-relaxed">{article.description}</div>
-                            </Link>
+                            </div>
                           </li>
                         ))}
                       </ul>

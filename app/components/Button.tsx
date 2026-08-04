@@ -13,6 +13,7 @@ interface ButtonProps {
   href?: string;
   target?: string;
   type?: 'button' | 'submit' | 'reset';
+  ariaLabel?: string;
 }
 
 const Button = ({ 
@@ -23,7 +24,8 @@ const Button = ({
   onClick,
   href,
   target,
-  type = 'button'
+  type = 'button',
+  ariaLabel
 }: ButtonProps) => {
   const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-2xl transition-all duration-300 cursor-pointer';
   
@@ -52,6 +54,7 @@ const Button = ({
           href={href} 
           target={target}
           className={combinedClass}
+          aria-label={ariaLabel}
         >
           {children}
         </Link>
@@ -66,6 +69,7 @@ const Button = ({
       className={combinedClass}
       onClick={onClick}
       type={type}
+      aria-label={ariaLabel}
     >
       {children}
     </motion.button>

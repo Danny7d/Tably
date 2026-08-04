@@ -35,11 +35,11 @@ const FeatureCard = ({ title, description, icon }: FeatureCardProps) => {
   const style = iconStyles[icon] || iconStyles.LayoutDashboard;
 
   return (
-    <Card className="p-7 h-full">
+    <Card className="p-7 h-full text-center">
       <motion.div
         whileHover={{ scale: 1.08 }}
         transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-        className={`w-14 h-14 ${style.bg} rounded-2xl flex items-center justify-center mb-5 shadow-lg ${style.glow}`}
+        className={`w-14 h-14 ${style.bg} rounded-2xl flex items-center justify-center mb-5 shadow-lg ${style.glow} mx-auto`}
       >
         <IconComponent className="text-white" size={26} />
       </motion.div>

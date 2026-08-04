@@ -8,9 +8,32 @@ import Section from '../components/Section';
 import Container from '../components/Container';
 import Card from '../components/Card';
 import Button from '../components/Button';
+import JsonLd from '../components/JsonLd';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact Tably',
+  description: 'Contact Tably for sales and support',
+  url: 'https://tably.site/contact',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Addis Ababa',
+    addressCountry: 'Ethiopia',
+  },
+};
+
 export default function Contact() {
+  return (
+    <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+      <JsonLd data={jsonLd} />
+      <ContactForm />
+    </div>
+  );
+}
+
+function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -109,7 +132,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-charcoal-900 mb-1 font-heading text-sm uppercase tracking-wider">Phone</h3>
-                    <p className="text-charcoal-500 text-[0.9375rem]">+1 (555) 123-4567</p>
+                    <p className="text-charcoal-500 text-[0.9375rem]">+251 937 505 084</p>
                   </div>
                 </div>
 
@@ -120,8 +143,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-bold text-charcoal-900 mb-1 font-heading text-sm uppercase tracking-wider">Office</h3>
                     <p className="text-charcoal-500 text-[0.9375rem] leading-relaxed">
-                      123 Innovation Drive<br />
-                      San Francisco, CA 94102
+                      Addis Ababa, Ethiopia
                     </p>
                   </div>
                 </div>

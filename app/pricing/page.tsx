@@ -8,66 +8,76 @@ import Section from '../components/Section';
 import Container from '../components/Container';
 import Card from '../components/Card';
 import Button from '../components/Button';
+import JsonLd from '../components/JsonLd';
 import { Check, HelpCircle } from 'lucide-react';
+
+const plans = [
+  {
+    name: 'Starter',
+    monthlyPrice: 2500,
+    annualPrice: 2000,
+    description: 'Perfect for small restaurants',
+    features: [
+      '1 Location',
+      'Unlimited orders',
+      'Basic analytics',
+      'Email support',
+      'QR code generation',
+      'Digital menu',
+      'Order management',
+    ],
+  },
+  {
+    name: 'Growth',
+    monthlyPrice: 7500,
+    annualPrice: 6000,
+    description: 'For growing restaurants',
+    popular: true,
+    features: [
+      '3 Locations',
+      'Unlimited orders',
+      'Advanced analytics',
+      'Priority support',
+      'Custom branding',
+      'Kitchen display system',
+      'Waiter dashboard',
+      'Staff management',
+      'API access',
+    ],
+  },
+  {
+    name: 'Enterprise',
+    monthlyPrice: null,
+    annualPrice: null,
+    description: 'For restaurant groups',
+    features: [
+      'Unlimited locations',
+      'White-label solution',
+      'Dedicated account manager',
+      'Custom integrations',
+      'SLA guarantee',
+      'Advanced security',
+      'Training programs',
+      'Custom reporting',
+      '24/7 phone support',
+    ],
+  },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'PriceSpecification',
+  name: 'Tably Pricing Plans',
+  description: 'Restaurant management software pricing starting at 2,500 ETB/month',
+  priceCurrency: 'ETB',
+};
 
 export default function Pricing() {
   const [isAnnual, setIsAnnual] = useState(false);
 
-  const plans = [
-    {
-      name: 'Starter',
-      monthlyPrice: 2500,
-      annualPrice: 2000,
-      description: 'Perfect for small restaurants',
-      features: [
-        '1 Location',
-        'Up to 50 orders/day',
-        'Basic analytics',
-        'Email support',
-        'QR code generation',
-        'Digital menu',
-        'Order management',
-      ],
-    },
-    {
-      name: 'Growth',
-      monthlyPrice: 7500,
-      annualPrice: 6000,
-      description: 'For growing restaurants',
-      popular: true,
-      features: [
-        '3 Locations',
-        'Unlimited orders',
-        'Advanced analytics',
-        'Priority support',
-        'Custom branding',
-        'Kitchen display system',
-        'Waiter dashboard',
-        'Staff management',
-        'API access',
-      ],
-    },
-    {
-      name: 'Enterprise',
-      monthlyPrice: null,
-      annualPrice: null,
-      description: 'For restaurant groups',
-      features: [
-        'Unlimited locations',
-        'White-label solution',
-        'Dedicated account manager',
-        'Custom integrations',
-        'SLA guarantee',
-        'Advanced security',
-        'Training programs',
-        'Custom reporting',
-        '24/7 phone support',
-      ],
-    },
-  ];
-
   return (
     <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+      <JsonLd data={jsonLd} />
       <Navbar />
       
       {/* Hero */}
@@ -102,6 +112,7 @@ export default function Pricing() {
                     ? 'bg-plum-500 text-white shadow-soft' 
                     : 'text-charcoal-500 hover:text-charcoal-900'
                 }`}
+                aria-label="Monthly pricing"
               >
                 Monthly
               </button>
@@ -112,6 +123,7 @@ export default function Pricing() {
                     ? 'bg-plum-500 text-white shadow-soft' 
                     : 'text-charcoal-500 hover:text-charcoal-900'
                 }`}
+                aria-label="Annual pricing with discount"
               >
                 Annual
                 <span className={`text-[0.6875rem] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider transition-colors ${

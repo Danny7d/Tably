@@ -7,7 +7,16 @@ import Section from '../components/Section';
 import Container from '../components/Container';
 import FeatureCard from '../components/FeatureCard';
 import Button from '../components/Button';
+import JsonLd from '../components/JsonLd';
 import { Check } from 'lucide-react';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Tably',
+  applicationCategory: 'BusinessApplication',
+  featureList: ['QR Ordering', 'Kitchen Display System', 'Waiter Dashboard', 'Analytics', 'Staff Management'],
+};
 
 export default function Features() {
   const featureSections = [
@@ -74,7 +83,7 @@ export default function Features() {
     {
       title: 'Multi-Branch Support',
       description: 'Manage multiple locations from a single centralized platform.',
-      icon: 'Building2', // We map this to BarChart3 or other mapped icon inside FeatureCard. Or it falls back to LayoutDashboard automatically.
+      icon: 'Building2',
       details: [
         'Centralized menu management',
         'Location-specific pricing',
@@ -111,6 +120,7 @@ export default function Features() {
 
   return (
     <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+      <JsonLd data={jsonLd} />
       <Navbar />
       
       {/* Hero */}

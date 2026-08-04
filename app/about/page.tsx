@@ -7,11 +7,22 @@ import Section from '../components/Section';
 import Container from '../components/Container';
 import Card from '../components/Card';
 import Button from '../components/Button';
+import JsonLd from '../components/JsonLd';
 import { Target, Eye, Heart, Users } from 'lucide-react';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Tably',
+  description: 'Modern restaurant operations platform',
+  url: 'https://tably.site',
+  logo: 'https://tably.site/logo.png',
+};
 
 export default function About() {
   return (
     <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+      <JsonLd data={jsonLd} />
       <Navbar />
       
       {/* Hero */}

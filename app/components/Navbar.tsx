@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-18 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2" aria-label="Tably Home">
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="text-2xl font-bold text-gradient"
@@ -83,12 +83,14 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2.5 rounded-xl hover:bg-cream-200/60 transition-colors text-charcoal-700"
+            className="lg:hidden p-2 rounded-xl hover:bg-cream-100 transition-colors"
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isOpen}
           >
-            {isOpen ? <X size={22} /> : <Menu size={22} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
