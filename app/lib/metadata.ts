@@ -10,8 +10,8 @@ export const siteMetadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/favicon.svg",
-        type: "image/svg+xml",
+        url: "/tably-favicon.png",
+        type: "image/png",
       },
     ],
   },

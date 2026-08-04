@@ -30,7 +30,7 @@ const plans = [
   {
     name: 'Growth',
     monthlyPrice: 7500,
-    annualPrice: 6000,
+    annualPrice: 7000,
     description: 'For growing restaurants',
     popular: true,
     features: [

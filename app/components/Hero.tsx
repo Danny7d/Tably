@@ -28,8 +28,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.05 }}
             className="inline-flex items-center gap-2 bg-plum-50 border border-plum-200/60 text-plum-600 text-sm font-medium px-5 py-2 rounded-full mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-sage-500 animate-pulse" />
-            Now in open beta — try it free
+            Now available
           </motion.div>
 
           <motion.h1

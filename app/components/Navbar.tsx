@@ -44,9 +44,9 @@ const Navbar = () => {
           <Link href="/" className="flex items-center space-x-2" aria-label="Tably Home">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold text-gradient"
+              className="flex items-center"
             >
-              Tably
+              <img src="/tably-horizontal-icon.jpg" alt="Tably" className="h-8 w-auto" />
             </motion.div>
           </Link>
 
