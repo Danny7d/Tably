@@ -32,7 +32,7 @@ export default function HomePricing({ plans }: HomePricingProps) {
           Simple, transparent pricing
         </h2>
         <p className="text-lg text-charcoal-500 max-w-2xl mx-auto leading-relaxed">
-          Start free, scale as you grow
+          Start here, scale as you grow
         </p>
       </motion.div>
       <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch mt-12">

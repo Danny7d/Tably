@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Pricing - Tably Restaurant Management | Affordable Plans for Every Restaurant',
-  description: 'Simple, transparent pricing for restaurants of all sizes. Starting at 2,500 ETB/month. Features include QR ordering, kitchen display, analytics, and more. Serving restaurants across Ethiopia.',
-  keywords: ['restaurant pricing', 'QR menu pricing', 'kitchen display system cost', 'restaurant software pricing', 'Tably plans', 'restaurant software Ethiopia pricing', 'POS alternative Ethiopia cost'],
+  title: 'Pricing - Tably Restaurant Management Software | Affordable Plans',
+  description: 'Simple, transparent pricing for restaurant ordering systems and management software. Starting at 5,500 ETB/month. QR ordering, kitchen display, analytics included.',
+  keywords: ['restaurant software pricing', 'QR ordering system cost', 'kitchen display system pricing', 'restaurant management software price', 'restaurant SaaS pricing', 'POS alternative cost Ethiopia', 'Addis Ababa restaurant software'],
   alternates: {
     canonical: 'https://tably.site/pricing',
   },
   openGraph: {
-    title: 'Pricing - Tably Restaurant Management',
-    description: 'Simple, transparent pricing for restaurants of all sizes. Starting at 2,500 ETB/month. Serving restaurants across Ethiopia.',
+    title: 'Pricing - Tably Restaurant Management Software',
+    description: 'Affordable pricing for restaurant ordering systems and management software. Starting at 5,500 ETB/month with QR ordering and kitchen display.',
     url: 'https://tably.site/pricing',
     images: [
       {

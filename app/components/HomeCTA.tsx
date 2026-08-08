@@ -21,8 +21,8 @@ export default function HomeCTA() {
           Join thousands of restaurants already using Tably to streamline their operations.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="secondary" size="lg" href="https://app.tably.site" className="bg-white text-plum-900 border-0 hover:bg-cream-100">
-            Start Free
+          <Button variant="secondary" size="lg" href="/contact" className="bg-white text-plum-900 border-0 hover:bg-cream-100">
+            Get Started
           </Button>
         </div>
       </div>

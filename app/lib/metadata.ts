@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const siteMetadata: Metadata = {
-  title: "Tably - Modern Restaurant Operations Platform",
-  description: "Streamline your restaurant operations with QR ordering, kitchen display systems, and powerful analytics. The all-in-one platform for modern restaurants in Ethiopia and beyond.",
-  keywords: ["restaurant management", "QR ordering", "kitchen display system", "restaurant analytics", "POS system", "restaurant software Ethiopia", "QR menu Ethiopian restaurants", "POS alternative Addis Ababa", "restaurant management software Ethiopia"],
+  title: "Tably - Restaurant Ordering System & Management Software",
+  description: "Modern restaurant operations platform with QR code ordering, kitchen display systems, waiter dashboards, and analytics. Complete restaurant management software for Ethiopian restaurants.",
+  keywords: ["restaurant ordering system", "QR code restaurant ordering", "restaurant management software", "restaurant operations software", "kitchen display system", "waiter ordering system", "restaurant analytics software", "restaurant SaaS", "POS alternative", "QR menu system", "restaurant software Ethiopia", "Addis Ababa restaurants"],
   authors: [{ name: "Tably" }],
   creator: "Tably",
   publisher: "Tably",
@@ -33,8 +33,8 @@ export const siteMetadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://tably.site",
-    title: "Tably - Modern Restaurant Operations Platform",
-    description: "Streamline your restaurant operations with QR ordering, kitchen display systems, and powerful analytics.",
+    title: "Tably - Restaurant Ordering System & Management Software",
+    description: "Complete restaurant operations platform with QR ordering, kitchen display systems, and analytics for modern restaurants.",
     siteName: "Tably",
     images: [
       {
@@ -47,8 +47,8 @@ export const siteMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tably - Modern Restaurant Operations Platform in Ethiopia",
-    description: "Streamline your restaurant operations with QR ordering, kitchen display systems, and powerful analytics. Serving restaurants in Ethiopia and worldwide.",
+    title: "Tably - Restaurant Ordering System & Management Software",
+    description: "QR code ordering, kitchen display systems, and analytics for restaurant operations. Serving restaurants in Ethiopia and worldwide.",
     images: ["https://tably.site/og-image.jpg"],
   },
   robots: {

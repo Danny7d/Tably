@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - Tably Restaurant Management | Get Support and Sales Help',
-  description: 'Contact Tably for sales inquiries, support, or general questions. Reach our team at contact@tably.site or support@tably.site. We\'re here to help your restaurant succeed in Ethiopia.',
-  keywords: ['contact Tably', 'restaurant software support', 'Tably sales', 'restaurant management help', 'restaurant software Ethiopia contact'],
+  title: 'Get Started - Tably Restaurant Management Software | Contact Sales',
+  description: 'Contact Tably to get started with restaurant management software. Request onboarding, ask about pricing, or book a demo for QR ordering systems and kitchen displays.',
+  keywords: ['restaurant software contact', 'get started restaurant management', 'QR ordering system sales', 'kitchen display system demo', 'restaurant software Ethiopia contact'],
   alternates: {
     canonical: 'https://tably.site/contact',
   },
   openGraph: {
-    title: 'Contact Us - Tably Restaurant Management',
-    description: 'Contact Tably for sales inquiries, support, or general questions. Serving restaurants in Ethiopia.',
+    title: 'Get Started - Tably Restaurant Management Software',
+    description: 'Contact Tably to get started with restaurant management software. Request onboarding, pricing, or a demo.',
     url: 'https://tably.site/contact',
     images: [
       {

@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Documentation - Tably Restaurant Management | Help Guides and Tutorials',
-  description: 'Access comprehensive documentation for Tably restaurant management platform. Learn how to use QR ordering, kitchen displays, analytics, and all features. Perfect for restaurants in Ethiopia.',
-  keywords: ['Tably documentation', 'restaurant software help', 'QR ordering guide', 'kitchen display tutorial', 'restaurant software Ethiopia documentation'],
+  title: 'Documentation - Tably Restaurant Software | QR Ordering & Kitchen Display Guides',
+  description: 'Complete documentation for Tably restaurant management software. Learn QR ordering systems, kitchen display setup, waiter dashboards, and restaurant analytics.',
+  keywords: ['restaurant software documentation', 'QR ordering system guide', 'kitchen display system tutorial', 'waiter dashboard help', 'restaurant analytics documentation'],
   alternates: {
     canonical: 'https://tably.site/docs',
   },
   openGraph: {
-    title: 'Documentation - Tably Restaurant Management',
-    description: 'Access comprehensive documentation for Tably restaurant management platform. Serving restaurants in Ethiopia.',
+    title: 'Documentation - Tably Restaurant Software',
+    description: 'Complete documentation for Tably restaurant management software with QR ordering and kitchen display guides.',
     url: 'https://tably.site/docs',
     images: [
       {

@@ -14,8 +14,8 @@ import { Check, HelpCircle } from 'lucide-react';
 const plans = [
   {
     name: 'Starter',
-    monthlyPrice: 2500,
-    annualPrice: 2000,
+    monthlyPrice: 5500,
+    annualPrice: 4950,
     description: 'Perfect for small restaurants',
     features: [
       '1 Location',
@@ -29,8 +29,8 @@ const plans = [
   },
   {
     name: 'Growth',
-    monthlyPrice: 7500,
-    annualPrice: 7000,
+    monthlyPrice: 12500,
+    annualPrice: 11250,
     description: 'For growing restaurants',
     popular: true,
     features: [
@@ -129,7 +129,7 @@ export default function Pricing() {
                 <span className={`text-[0.6875rem] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider transition-colors ${
                   isAnnual ? 'bg-gold-400 text-charcoal-900' : 'bg-gold-100 text-gold-700'
                 }`}>
-                  Save 20%
+                  Save 10%
                 </span>
               </button>
             </div>

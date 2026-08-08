@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Features - Tably Restaurant Management | Complete Restaurant Operations Suite',
-  description: 'Explore Tably\'s powerful features: QR ordering, kitchen display systems, waiter dashboards, analytics, staff management, and more for modern restaurants in Ethiopia.',
-  keywords: ['restaurant features', 'QR ordering features', 'kitchen display features', 'restaurant analytics', 'staff management', 'restaurant software Ethiopia features', 'QR menu Ethiopian restaurants'],
+  title: 'Features - Tably Restaurant Ordering System | QR Ordering & Kitchen Display',
+  description: 'Complete restaurant operations suite: QR code ordering, kitchen display systems, waiter dashboards, restaurant analytics, and staff management. Modern restaurant software.',
+  keywords: ['restaurant ordering system features', 'QR code ordering features', 'kitchen display system features', 'waiter ordering system', 'restaurant analytics features', 'restaurant management software features', 'Ethiopia restaurant software'],
   alternates: {
     canonical: 'https://tably.site/features',
   },
   openGraph: {
-    title: 'Features - Tably Restaurant Management',
-    description: 'Explore Tably\'s powerful features for modern restaurant operations in Ethiopia.',
+    title: 'Features - Tably Restaurant Ordering System',
+    description: 'Complete restaurant operations suite with QR ordering, kitchen display systems, waiter dashboards, and analytics.',
     url: 'https://tably.site/features',
     images: [
       {

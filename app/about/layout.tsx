@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us - Tably Restaurant Management Platform',
-  description: 'Learn about Tably\'s mission to revolutionize restaurant operations with modern technology. Our story, values, and commitment to helping restaurants succeed in Ethiopia and beyond.',
-  keywords: ['about Tably', 'restaurant management company', 'Tably mission', 'restaurant technology', 'restaurant software Ethiopia company'],
+  title: 'About Us - Tably Restaurant Management Software Company',
+  description: 'Learn about Tably - the restaurant management software company revolutionizing restaurant operations with QR ordering systems, kitchen displays, and analytics in Ethiopia.',
+  keywords: ['restaurant software company', 'restaurant management software about', 'Tably company mission', 'restaurant technology company Ethiopia', 'QR ordering system company'],
   alternates: {
     canonical: 'https://tably.site/about',
   },
   openGraph: {
-    title: 'About Us - Tably Restaurant Management',
-    description: 'Learn about Tably\'s mission to revolutionize restaurant operations with modern technology in Ethiopia.',
+    title: 'About Us - Tably Restaurant Management Software',
+    description: 'Learn about Tably - the restaurant management software company revolutionizing restaurant operations with QR ordering and analytics.',
     url: 'https://tably.site/about',
     images: [
       {

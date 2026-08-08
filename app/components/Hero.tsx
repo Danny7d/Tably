@@ -58,8 +58,8 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button variant="primary" size="lg" href="/login">
-              Start Free
+            <Button variant="primary" size="lg" href="/contact">
+              Get Started
             </Button>
           </motion.div>
         </motion.div>

@@ -70,16 +70,10 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
-              href="/login"
-              className="text-sm font-medium text-charcoal-500 hover:text-plum-600 transition-colors px-3 py-2"
-            >
-              Login
-            </Link>
-            <Link
-              href="https://app.tably.site"
+              href="/contact"
               className="bg-gradient-button text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow-glow-plum/30 hover:shadow-glow-plum hover:-translate-y-0.5 transition-all duration-300"
             >
-              Start Free
+              Get Started
             </Link>
           </div>
 
@@ -128,18 +122,11 @@ const Navbar = () => {
               ))}
               <div className="pt-4 mt-3 border-t border-cream-300/60 space-y-3">
                 <Link
-                  href="/login"
-                  onClick={() => setIsOpen(false)}
-                  className="block py-3 px-4 text-charcoal-600 hover:text-plum-600 font-medium rounded-xl transition-colors"
-                >
-                  Login
-                </Link>
-                <Link
-                  href="https://app.tably.site"
+                  href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="block bg-gradient-button text-white px-6 py-3.5 rounded-xl text-center font-semibold shadow-glow-plum/30 transition-all duration-300"
                 >
-                  Start Free
+                  Get Started
                 </Link>
               </div>
             </div>

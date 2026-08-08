@@ -87,10 +87,10 @@ function ContactForm() {
               Connect With Us
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-charcoal-900 mb-6 font-heading tracking-tight leading-[1.1]">
-              Get in <span className="text-gradient">touch</span>
+              Get <span className="text-gradient">Started</span>
             </h1>
             <p className="text-lg lg:text-xl text-charcoal-500 mb-8 leading-relaxed max-w-2xl mx-auto">
-              Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+              Ready to modernize your restaurant? Contact us to get started, request onboarding, ask about pricing, or book a demo.
             </p>
           </motion.div>
         </Container>
@@ -108,9 +108,9 @@ function ContactForm() {
               className="lg:col-span-5 space-y-8"
             >
               <div>
-                <h2 className="text-3xl font-extrabold text-charcoal-900 mb-4 font-heading tracking-tight">Contact Information</h2>
+                <h2 className="text-3xl font-extrabold text-charcoal-900 mb-4 font-heading tracking-tight">Start Your Journey</h2>
                 <p className="text-charcoal-500 leading-relaxed">
-                  Fill out the form and our team will get back to you within 24 hours.
+                  Ready to transform your restaurant operations? Contact us to get started, learn about pricing, or schedule a demo.
                 </p>
               </div>
 
@@ -131,8 +131,10 @@ function ContactForm() {
                     <Phone size={20} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-charcoal-900 mb-1 font-heading text-sm uppercase tracking-wider">Phone</h3>
-                    <p className="text-charcoal-500 text-[0.9375rem]">+251 937 505 084</p>
+                    <h3 className="font-bold text-charcoal-900 mb-1 font-heading text-sm uppercase tracking-wider">Telegram</h3>
+                    <a href="https://t.me/medanzs" target="_blank" rel="noopener noreferrer" className="text-charcoal-500 text-[0.9375rem] hover:text-plum-600 transition-colors">
+                      @medanzs
+                    </a>
                   </div>
                 </div>
 
@@ -215,7 +217,7 @@ function ContactForm() {
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       rows={5}
                       className="input-premium resize-none"
-                      placeholder="How can we help you?"
+                      placeholder="Tell us about your restaurant and how we can help..."
                       required
                     />
                   </div>
