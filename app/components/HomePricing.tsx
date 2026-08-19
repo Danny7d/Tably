@@ -76,7 +76,7 @@ export default function HomePricing({ plans }: HomePricingProps) {
                     ))}
                   </ul>
                 </div>
-                <Button variant={isPopular ? 'primary' : 'secondary'} className="w-full mt-auto" href="/pricing">
+                <Button variant={isPopular ? 'primary' : 'secondary'} className="w-full mt-auto" href="/contact">
                   Get Started
                 </Button>
               </Card>

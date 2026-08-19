@@ -48,12 +48,12 @@ const Button = ({
       <motion.div
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.97 }}
-        className="inline-flex"
+        className={`inline-flex max-sm:flex max-sm:w-full max-sm:justify-center max-sm:mx-auto ${className.includes('w-full') ? 'w-full' : ''}`}
       >
         <Link 
           href={href} 
           target={target}
-          className={combinedClass}
+          className={`${combinedClass} max-sm:w-full max-sm:text-center max-sm:justify-center`}
           aria-label={ariaLabel}
         >
           {children}
@@ -66,7 +66,7 @@ const Button = ({
     <motion.button
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
-      className={combinedClass}
+      className={`${combinedClass} max-sm:w-full max-sm:flex max-sm:justify-center max-sm:mx-auto max-sm:text-center`}
       onClick={onClick}
       type={type}
       aria-label={ariaLabel}

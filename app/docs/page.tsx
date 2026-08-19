@@ -57,7 +57,6 @@ function DocsContent() {
       articles: [
         { title: 'Order Flow', description: 'Understanding the order lifecycle' },
         { title: 'Order Management', description: 'View and modify orders' },
-        { title: 'Payment Processing', description: 'Handle payments and refunds' },
       ],
     },
     {

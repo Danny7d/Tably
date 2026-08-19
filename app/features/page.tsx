@@ -145,9 +145,11 @@ export default function Features() {
             <p className="text-lg lg:text-xl text-charcoal-500 mb-10 leading-relaxed max-w-2xl mx-auto">
               Everything you need to streamline operations, increase revenue, and deliver exceptional customer experiences.
             </p>
-            <Button variant="primary" size="lg" href="/login">
-              Start Free Trial
-            </Button>
+            <div className="flex justify-center items-center">
+              <Button variant="primary" size="lg" href="/contact">
+                Get Started
+              </Button>
+            </div>
           </motion.div>
         </Container>
       </Section>
@@ -217,11 +219,13 @@ export default function Features() {
                 Ready to transform your restaurant?
               </h2>
               <p className="text-lg text-cream-100/90 max-w-2xl mx-auto mb-10 leading-relaxed">
-                Start with a free trial and see the difference Tably can make.
+                Get started today and see the difference Tably can make.
               </p>
-              <Button variant="secondary" size="lg" href="/login" className="bg-white text-plum-900 border-0 hover:bg-cream-100">
-                Start Free Trial
-              </Button>
+              <div className="flex justify-center items-center">
+                <Button variant="secondary" size="lg" href="/contact" className="bg-white text-plum-900 border-0 hover:bg-cream-100">
+                  Get Started
+                </Button>
+              </div>
             </div>
           </motion.div>
         </Container>

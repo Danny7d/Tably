@@ -29,8 +29,8 @@ const plans = [
   },
   {
     name: 'Growth',
-    monthlyPrice: 12500,
-    annualPrice: 11250,
+    monthlyPrice: 14500,
+    annualPrice: 13050,
     description: 'For growing restaurants',
     popular: true,
     features: [
@@ -200,7 +200,7 @@ export default function Pricing() {
                     <Button
                       variant={isPopular ? 'primary' : 'secondary'}
                       className="w-full mt-auto"
-                      href="/login"
+                      href="/contact"
                     >
                       Get Started
                     </Button>
@@ -285,11 +285,13 @@ export default function Pricing() {
                 Ready to get started?
               </h2>
               <p className="text-lg text-cream-100/90 max-w-2xl mx-auto mb-10 leading-relaxed">
-                Start your free trial today and see the difference Tably can make.
+                Get started today and see the difference Tably can make for your restaurant.
               </p>
-              <Button variant="secondary" size="lg" href="https://app.tably.site" className="bg-white text-plum-900 border-0 hover:bg-cream-100">
-                Start Free Trial
-              </Button>
+              <div className="flex justify-center items-center">
+                <Button variant="secondary" size="lg" href="/contact" className="bg-white text-plum-900 border-0 hover:bg-cream-100">
+                  Get Started
+                </Button>
+              </div>
             </div>
           </motion.div>
         </Container>
