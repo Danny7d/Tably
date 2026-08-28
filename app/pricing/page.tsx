@@ -14,8 +14,8 @@ import { Check, HelpCircle } from 'lucide-react';
 const plans = [
   {
     name: 'Starter',
-    monthlyPrice: 5500,
-    annualPrice: 4950,
+    monthlyPrice: 8999,
+    annualPrice: 8099,
     description: 'Perfect for small restaurants',
     features: [
       '1 Location',
@@ -29,8 +29,8 @@ const plans = [
   },
   {
     name: 'Growth',
-    monthlyPrice: 14500,
-    annualPrice: 13050,
+    monthlyPrice: 24297,
+    annualPrice: 21867,
     description: 'For growing restaurants',
     popular: true,
     features: [
