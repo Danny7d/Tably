@@ -11,64 +11,13 @@ import Button from '../components/Button';
 import JsonLd from '../components/JsonLd';
 import { Check, HelpCircle } from 'lucide-react';
 
-const plans = [
-  {
-    name: 'Starter',
-    monthlyPrice: 8999,
-    annualPrice: 8099,
-    description: 'Perfect for small restaurants',
-    features: [
-      '1 Location',
-      'Unlimited orders',
-      'Basic analytics',
-      'Email support',
-      'QR code generation',
-      'Digital menu',
-      'Order management',
-    ],
-  },
-  {
-    name: 'Growth',
-    monthlyPrice: 24297,
-    annualPrice: 21867,
-    description: 'For growing restaurants',
-    popular: true,
-    features: [
-      '3 Locations',
-      'Unlimited orders',
-      'Advanced analytics',
-      'Priority support',
-      'Custom branding',
-      'Kitchen display system',
-      'Waiter dashboard',
-      'Staff management',
-      'API access',
-    ],
-  },
-  {
-    name: 'Enterprise',
-    monthlyPrice: null,
-    annualPrice: null,
-    description: 'For restaurant groups',
-    features: [
-      'Unlimited locations',
-      'White-label solution',
-      'Dedicated account manager',
-      'Custom integrations',
-      'SLA guarantee',
-      'Advanced security',
-      'Training programs',
-      'Custom reporting',
-      '24/7 phone support',
-    ],
-  },
-];
+import { plans } from '../lib/pricing-data';
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'PriceSpecification',
   name: 'Tably Pricing Plans',
-  description: 'Restaurant management software pricing starting at 2,500 ETB/month',
+  description: 'Restaurant management software pricing starting at 8,999 ETB/month',
   priceCurrency: 'ETB',
 };
 

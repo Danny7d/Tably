@@ -92,8 +92,12 @@ export const faqs = [
   },
 ];
 
-export const plans = [
-  { name: 'Starter', price: '5,500 ETB', description: 'Perfect for small restaurants', features: ['1 Location', 'Unlimited orders', 'Basic analytics', 'Email support'] },
-  { name: 'Growth', price: '14,500 ETB', description: 'For growing restaurants', popular: true, features: ['3 Locations', 'Unlimited orders', 'Advanced analytics', 'Priority support', 'Custom branding'] },
-  { name: 'Enterprise', price: 'Custom', description: 'For restaurant groups', features: ['Unlimited locations', 'White-label solution', 'Dedicated account manager', 'Custom integrations', 'SLA guarantee'] },
-];
+import { plans as pricingPlans } from './pricing-data';
+
+export const plans = pricingPlans.map((plan) => ({
+  name: plan.name,
+  price: plan.monthlyPrice ? `${plan.monthlyPrice.toLocaleString()} ETB` : 'Custom',
+  description: plan.description,
+  popular: plan.popular,
+  features: plan.features,
+}));

@@ -49,9 +49,9 @@ const jsonLd = {
   operatingSystem: 'Web',
   offers: {
     '@type': 'Offer',
-    price: '5500',
+    price: '8999',
     priceCurrency: 'ETB',
-    description: 'Starting at 5,500 ETB/month',
+    description: 'Starting at 8,999 ETB/month',
   },
   description: 'Modern restaurant operations platform with QR ordering, kitchen display systems, and powerful analytics.',
   url: 'https://tably.site',
