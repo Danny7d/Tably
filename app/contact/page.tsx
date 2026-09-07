@@ -132,8 +132,8 @@ function ContactForm() {
                   </div>
                   <div>
                     <h3 className="font-bold text-charcoal-900 mb-1 font-heading text-sm uppercase tracking-wider">Telegram</h3>
-                    <a href="https://t.me/medanzs" target="_blank" rel="noopener noreferrer" className="text-charcoal-500 text-[0.9375rem] hover:text-plum-600 transition-colors">
-                      @medanzs
+                    <a href="https://t.me/TablyContact" target="_blank" rel="noopener noreferrer" className="text-charcoal-500 text-[0.9375rem] hover:text-plum-600 transition-colors">
+                      @TablyContact
                     </a>
                   </div>
                 </div>
