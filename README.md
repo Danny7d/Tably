@@ -2,7 +2,7 @@
 
 **Live at:** [https://tably.site](https://tably.site)
 
-> ⚠️ **REPOSITORY SCOPE NOTICE**: This repository contains **exclusively** the public-facing marketing website and landing portal for Tably. The core multi-tenant SaaS application, live order processing engine, kitchen display systems (KDS), database infrastructure, and backend services reside in separate, private repositories. This codebase is the customer acquisition and product showcase layer only.
+> ⚠️ **REPOSITORY SCOPE NOTICE**: This repository contains **exclusively** the public-facing marketing website and landing portal for Tably. The core multi-tenant SaaS application, live order processing engine, kitchen display systems (KDS), database infrastructure, and backend services reside in separate repositories. This codebase is the customer acquisition and product showcase layer only.
 
 ---
 
