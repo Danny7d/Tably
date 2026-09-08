@@ -442,7 +442,7 @@ Found a bug or have a suggestion? Please:
 **A:** The core Tably SaaS application, including the admin dashboard, kitchen display system, and order processing engine, resides in private repositories. This marketing site is the public entry point only.
 
 ### Q: How do I report security issues?
-**A:** Please report security vulnerabilities responsibly to our security team rather than through public issues. Contact: security@tably.site (or your designated security contact).
+**A:** Please report security vulnerabilities responsibly to our security team rather than through public issues. Contact: contact@tably.site (or your designated security contact).
 
 ### Q: Can I deploy this to my own servers?
 **A:** This repository is designed specifically for deployment to Vercel. Deploying to other platforms may require significant configuration changes.
