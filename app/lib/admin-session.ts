@@ -45,7 +45,7 @@ export async function verifySessionToken(token: string | undefined | null, secre
   try {
     const key = await getKey(secret);
     const sig = fromBase64Url(sigPart);
-    return await crypto.subtle.verify('HMAC', key, sig, encoder.encode(expiryStr));
+    return await crypto.subtle.verify('HMAC', key, sig as BufferSource, encoder.encode(expiryStr));
   } catch {
     return false;
   }
