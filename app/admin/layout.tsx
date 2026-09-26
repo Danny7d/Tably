@@ -9,31 +9,43 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [checking, setChecking] = useState(true);
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const router = useRouter();
 
   useEffect(() => {
-    const auth = sessionStorage.getItem('admin_auth');
-    if (auth === 'true') {
-      setIsAuthenticated(true);
-    }
+    fetch('/api/admin/auth')
+      .then((res) => setIsAuthenticated(res.ok))
+      .catch(() => setIsAuthenticated(false))
+      .finally(() => setChecking(false));
   }, []);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD || password === 'owner@123') {
+    setError('');
+    const res = await fetch('/api/admin/auth', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password }),
+    });
+    if (res.ok) {
       setIsAuthenticated(true);
-      sessionStorage.setItem('admin_auth', 'true');
+      router.refresh();
     } else {
-      alert('Incorrect password');
+      setError('Incorrect password');
     }
   };
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    await fetch('/api/admin/auth', { method: 'DELETE' });
     setIsAuthenticated(false);
-    sessionStorage.removeItem('admin_auth');
     router.push('/admin');
   };
+
+  if (checking) {
+    return null;
+  }
 
   if (!isAuthenticated) {
     return (
@@ -52,6 +64,7 @@ export default function AdminLayout({
                 required
               />
             </div>
+            {error && <p className="text-red-500 text-sm">{error}</p>}
             <button
               type="submit"
               className="w-full bg-gradient-button text-white px-6 py-3 rounded-xl font-semibold shadow-glow-plum/30 hover:shadow-glow-plum hover:-translate-y-0.5 transition-all duration-300"
