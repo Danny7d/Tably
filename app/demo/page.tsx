@@ -27,16 +27,16 @@ export default function Demo() {
             className="text-center max-w-3xl mx-auto animate-fade-up"
           >
             <div className="inline-flex items-center gap-2 bg-plum-50 border border-plum-200/60 text-plum-600 text-sm font-medium px-5 py-2 rounded-full mb-6">
-              Interactive Demo
+              Product Tour
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-charcoal-900 mb-6 font-heading tracking-tight leading-[1.1]">
               See Tably in <span className="text-gradient">action</span>
             </h1>
             <p className="text-lg lg:text-xl text-charcoal-500 mb-10 leading-relaxed max-w-2xl mx-auto">
-              Get a personalized demo of how Tably can transform your restaurant operations.
+              Watch how Tably transforms restaurant operations with QR ordering, kitchen displays, and powerful analytics.
             </p>
             <Button variant="primary" size="lg" href="/contact">
-              Book a Demo
+              Get Started
             </Button>
           </motion.div>
         </Container>
@@ -53,23 +53,14 @@ export default function Demo() {
           >
             {/* Aspect Ratio Video container with glow borders */}
             <Card className="aspect-video bg-plum-950 flex flex-col items-center justify-center relative overflow-hidden group shadow-elevated border border-plum-900/50">
-              <div className="absolute inset-0 bg-gradient-to-br from-plum-900 via-charcoal-900 to-gold-950/40 opacity-70 transition-opacity duration-500 group-hover:opacity-60" />
-              
-              {/* Pulse effect wrapper */}
-              <div className="relative z-10 flex items-center justify-center">
-                <div className="absolute -inset-4 bg-white/10 rounded-full blur-md animate-pulse" />
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="relative z-10 bg-white text-plum-900 rounded-full p-6 shadow-glow-plum hover:bg-cream-100 transition-colors cursor-pointer flex items-center justify-center"
-                >
-                  <Play className="fill-plum-900 text-plum-900 ml-1" size={26} />
-                </motion.button>
-              </div>
-              
-              <p className="absolute bottom-6 left-6 right-6 text-center md:text-left text-cream-100/80 text-sm font-semibold tracking-wider uppercase relative z-10">
-                Watch our 2-minute overview
-              </p>
+              <video
+                className="w-full h-full object-cover"
+                controls
+                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%231a1025' width='1920' height='1080'/%3E%3C/svg%3E"
+              >
+                <source src="/tably-demo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </Card>
           </motion.div>
         </Container>
@@ -86,7 +77,7 @@ export default function Demo() {
           >
             <div className="w-12 h-1.5 bg-gradient-button rounded-full mx-auto mb-4" />
             <h2 className="text-3xl sm:text-4xl font-extrabold text-charcoal-900 mb-4 font-heading tracking-tight">
-              What you'll see in the demo
+              What you'll see in the video
             </h2>
           </motion.div>
 
@@ -165,7 +156,7 @@ export default function Demo() {
 
             <div className="mt-14 text-center">
               <Button variant="primary" size="lg" href="/contact">
-                Schedule Your Demo
+                Book a Personalized Demo
                 <ArrowRight size={16} />
               </Button>
             </div>
