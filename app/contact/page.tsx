@@ -9,7 +9,7 @@ import Container from '../components/Container';
 import Card from '../components/Card';
 import Button from '../components/Button';
 import JsonLd from '../components/JsonLd';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -40,11 +40,12 @@ function ContactForm() {
     company: '',
     message: '',
   });
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Store the message
+    setStatus('sending');
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -55,14 +56,14 @@ function ContactForm() {
       });
 
       if (response.ok) {
-        alert('Message sent successfully!');
+        setStatus('success');
         setFormData({ name: '', email: '', company: '', message: '' });
       } else {
-        alert('Failed to send message. Please try again.');
+        setStatus('error');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Failed to send message. Please try again.');
+      setStatus('error');
     }
   };
 
@@ -160,7 +161,38 @@ function ContactForm() {
               className="lg:col-span-7"
             >
               <Card className="p-8 lg:p-10 border border-cream-300/60 shadow-card">
+                {status === 'success' ? (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                    className="flex flex-col items-center text-center py-10"
+                  >
+                    <div className="w-16 h-16 bg-plum-50 text-plum-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+                      <CheckCircle2 size={32} />
+                    </div>
+                    <h3 className="text-2xl font-extrabold text-charcoal-900 mb-3 font-heading tracking-tight">
+                      Message Sent
+                    </h3>
+                    <p className="text-charcoal-500 leading-relaxed max-w-sm mb-8">
+                      Thanks for reaching out. We&apos;ll get back to you shortly.
+                    </p>
+                    <Button variant="primary" size="lg" onClick={() => setStatus('idle')}>
+                      <span>Send Another Message</span>
+                    </Button>
+                  </motion.div>
+                ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {status === 'error' && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="flex items-center gap-3 p-4 rounded-xl bg-rose-50 border border-rose-200/60 text-rose-600 text-sm"
+                    >
+                      <AlertCircle size={18} className="shrink-0" />
+                      <span>Something went wrong sending your message. Please try again.</span>
+                    </motion.div>
+                  )}
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-xs font-bold text-charcoal-500 uppercase tracking-wider mb-2">
@@ -222,11 +254,12 @@ function ContactForm() {
                     />
                   </div>
 
-                  <Button variant="primary" size="lg" className="w-full mt-2" type="submit">
-                    <span>Send Message</span>
+                  <Button variant="primary" size="lg" className="w-full mt-2" type="submit" disabled={status === 'sending'}>
+                    <span>{status === 'sending' ? 'Sending...' : 'Send Message'}</span>
                     <Send size={16} />
                   </Button>
                 </form>
+                )}
               </Card>
             </motion.div>
           </div>
