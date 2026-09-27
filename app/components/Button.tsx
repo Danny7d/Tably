@@ -14,6 +14,7 @@ interface ButtonProps {
   target?: string;
   type?: 'button' | 'submit' | 'reset';
   ariaLabel?: string;
+  disabled?: boolean;
 }
 
 const Button = ({ 
@@ -25,9 +26,10 @@ const Button = ({
   href,
   target,
   type = 'button',
-  ariaLabel
+  ariaLabel,
+  disabled = false
 }: ButtonProps) => {
-  const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-2xl transition-all duration-300 cursor-pointer';
+  const baseStyles = `inline-flex items-center justify-center font-semibold rounded-2xl transition-all duration-300 ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`;
   
   const variants = {
     primary: 'bg-gradient-button text-white shadow-glow-plum/40 hover:shadow-glow-plum hover:-translate-y-0.5 active:translate-y-0',
@@ -64,11 +66,12 @@ const Button = ({
 
   return (
     <motion.button
-      whileHover={{ scale: 1.03 }}
-      whileTap={{ scale: 0.97 }}
+      whileHover={disabled ? {} : { scale: 1.03 }}
+      whileTap={disabled ? {} : { scale: 0.97 }}
       className={`${combinedClass} max-sm:w-full max-sm:flex max-sm:justify-center max-sm:mx-auto max-sm:text-center`}
       onClick={onClick}
       type={type}
+      disabled={disabled}
       aria-label={ariaLabel}
     >
       {children}
