@@ -122,14 +122,33 @@ function ContactForm() {
                   </div>
                   <div>
                     <h3 className="font-bold text-charcoal-900 mb-1 font-heading text-sm uppercase tracking-wider">Email</h3>
-                    <p className="text-charcoal-500 text-[0.9375rem]">contact@tably.site</p>
-                    <p className="text-charcoal-400 text-xs">support@tably.site</p>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@tably.site" target="_blank" rel="noopener noreferrer" className="block text-charcoal-500 text-[0.9375rem] hover:text-plum-600 transition-colors">
+                      contact@tably.site
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=support@tably.site" target="_blank" rel="noopener noreferrer" className="block text-charcoal-400 text-xs hover:text-plum-600 transition-colors">
+                      support@tably.site
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-5 rounded-2xl bg-cream-100/50 border border-cream-300/40 hover:border-plum-200/50 transition-all duration-300">
+                  <div className="w-10 h-10 bg-plum-50 text-plum-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
+                    <Phone size={20} />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-charcoal-900 mb-1 font-heading text-sm uppercase tracking-wider">Phone</h3>
+                    <a href="tel:+251937505084" className="block text-charcoal-500 text-[0.9375rem] hover:text-plum-600 transition-colors">
+                      0937 505 084
+                    </a>
+                    <a href="tel:+251799535052" className="block text-charcoal-400 text-xs hover:text-plum-600 transition-colors">
+                      0799 535 052
+                    </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4 p-5 rounded-2xl bg-cream-100/50 border border-cream-300/40 hover:border-gold-200/50 transition-all duration-300">
                   <div className="w-10 h-10 bg-gold-50 text-gold-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
-                    <Phone size={20} />
+                    <Send size={20} />
                   </div>
                   <div>
                     <h3 className="font-bold text-charcoal-900 mb-1 font-heading text-sm uppercase tracking-wider">Telegram</h3>
