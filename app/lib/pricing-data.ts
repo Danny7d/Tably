@@ -25,7 +25,7 @@ export const plans: PricingPlan[] = [
   },
   {
     name: 'Growth',
-    monthlyPrice: 24297,
+    monthlyPrice: 24299,
     annualPrice: 21867,
     description: 'For growing restaurants',
     popular: true,
