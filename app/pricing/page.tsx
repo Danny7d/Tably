@@ -184,16 +184,13 @@ export default function Pricing() {
               },
               {
                 question: 'What payment methods do you accept?',
-                answer: 'We accept all major credit cards, debit cards, and bank transfers. For Enterprise plans, we also offer invoicing.',
+                answer: 'We accept TeleBirr and bank transfers.',
               },
               {
                 question: 'Is there a free trial?',
-                answer: 'Yes! All plans come with a 14-day free trial. No credit card required to start.',
+                answer: 'Yes! All plans come with a 7-day free trial. No credit card required to start.',
               },
-              {
-                question: 'Do you offer refunds?',
-                answer: 'We offer a 30-day money-back guarantee. If you\'re not satisfied, contact us for a full refund.',
-              },
+            
             ].map((faq, index) => (
               <motion.div
                 key={faq.question}
