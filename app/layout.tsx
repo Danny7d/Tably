@@ -3,6 +3,7 @@ import { Inter, Manrope, Sora } from "next/font/google";
 import "./globals.css";
 import { siteMetadata } from "./lib/metadata";
 import JsonLd from "./components/JsonLd";
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -59,6 +60,7 @@ export default function RootLayout({
         <JsonLd data={organizationJsonLd} />
         <JsonLd data={webSiteJsonLd} />
         {children}
+        <Analytics />
       </body>
     </html>
   );
