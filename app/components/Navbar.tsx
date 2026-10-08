@@ -1,46 +1,73 @@
 'use client';
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-const navItems = [
-  { name: 'Features', href: '/features' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Demo', href: '/demo' },
-  { name: 'Docs', href: '/docs' },
-  { name: 'About', href: '/about' },
-];
-
-export default function Navbar() {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navItems = [
+    { name: 'Features', href: '/features' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Demo', href: '/demo' },
+    { name: 'Docs', href: '/docs' },
+    { name: 'Contact', href: '/contact' },
+  ];
 
   return (
     <motion.nav
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-      className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-cream-300/60"
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled 
+          ? 'glass shadow-card border-b border-cream-300/40' 
+          : 'bg-transparent'
+      }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center gap-3">
-            <motion.div whileHover={{ scale: 1.03 }} className="text-2xl font-bold text-gradient-plum">Tably</motion.div>
+        <div className="flex items-center justify-between h-18 lg:h-20">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2" aria-label="Tably Home">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center"
+            >
+              <img src="/tably-horizontal-icon.jpg" alt="Tably" className="h-8 w-auto" />
+            </motion.div>
           </Link>
 
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="relative px-4 py-2 text-sm font-medium rounded-xl text-charcoal-500 hover:text-charcoal-900 hover:bg-cream-200/60 transition-all duration-200"
+                className={`relative px-4 py-2 text-sm font-medium rounded-xl transition-all duration-200 ${
+                  pathname === item.href 
+                    ? 'text-plum-600 bg-plum-50' 
+                    : 'text-charcoal-500 hover:text-charcoal-900 hover:bg-cream-200/60'
+                }`}
               >
                 {item.name}
               </Link>
             ))}
           </div>
 
+          {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/contact"
@@ -50,6 +77,7 @@ export default function Navbar() {
             </Link>
           </div>
 
+          {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 rounded-xl hover:bg-cream-100 transition-colors"
@@ -61,6 +89,7 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -81,7 +110,11 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="block py-3 px-4 rounded-xl font-medium text-charcoal-600 hover:text-plum-600 hover:bg-cream-200/40 transition-colors"
+                    className={`block py-3 px-4 rounded-xl font-medium transition-colors ${
+                      pathname === item.href
+                        ? 'text-plum-600 bg-plum-50'
+                        : 'text-charcoal-600 hover:text-plum-600 hover:bg-cream-200/40'
+                    }`}
                   >
                     {item.name}
                   </Link>
@@ -102,4 +135,6 @@ export default function Navbar() {
       </AnimatePresence>
     </motion.nav>
   );
-}
+};
+
+export default Navbar;
