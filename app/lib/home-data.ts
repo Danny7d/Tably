@@ -68,7 +68,7 @@ export const testimonials = [
 export const faqs = [
   {
     question: 'How long does it take to get started?',
-    answer: 'Most restaurants are up and running within 24 hours. Our team will help you set up your menu, generate QR codes, and train your staff.',
+    answer: 'Within 24 hours. Our team will help you set up your menu, generate QR codes, and train your staff.',
   },
   {
     question: 'Do customers need to download an app?',
