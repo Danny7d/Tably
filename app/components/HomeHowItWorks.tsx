@@ -2,7 +2,17 @@
 
 import { motion } from 'framer-motion';
 
-export default function HomeHowItWorks({ howItWorks }: { howItWorks: Array<{ step: number; title: string; description: string }> }) {
+interface HowItWork {
+  step: number;
+  title: string;
+  description: string;
+}
+
+interface HomeHowItWorksProps {
+  howItWorks: HowItWork[];
+}
+
+export default function HomeHowItWorks({ howItWorks }: HomeHowItWorksProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
