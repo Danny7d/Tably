@@ -108,8 +108,8 @@ export default function Pricing() {
                       : 'border border-cream-300/60 shadow-card'
                   }`}>
                     {isPopular && (
-                      <div className="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-charcoal-900 text-xs font-bold px-4 py-1 rounded-full shadow-soft uppercase tracking-wider">
-                        Most Popular
+                      <div className="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-charcoal-900 text-xs font-bold px-4 py-1 rounded-full shadow-soft uppercase tracking-wide">
+                        Recommended
                       </div>
                     )}
                     <div>
