@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Card from './Card';
 import Button from './Button';
@@ -76,8 +77,12 @@ export default function HomePricing({ plans }: HomePricingProps) {
                     ))}
                   </ul>
                 </div>
-                <Button variant={isPopular ? 'primary' : 'secondary'} className="w-full mt-auto" href="/contact">
-                  Get Started
+                <Button
+                  variant={isPopular ? 'primary' : 'secondary'}
+                  className="w-full mt-auto"
+                  href={plan.name === 'Enterprise' ? '/contact?subject=Enterprise%20inquiry' : '/contact'}
+                >
+                  {plan.name === 'Enterprise' ? 'Talk to Sales' : 'Contact Us'}
                 </Button>
               </Card>
             </motion.div>

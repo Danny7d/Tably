@@ -149,9 +149,9 @@ export default function Pricing() {
                     <Button
                       variant={isPopular ? 'primary' : 'secondary'}
                       className="w-full mt-auto"
-                      href="/contact"
+                      href={plan.name === 'Enterprise' ? '/contact?subject=Enterprise%20inquiry' : '/contact'}
                     >
-                      Get Started
+                      {plan.name === 'Enterprise' ? 'Talk to Sales' : 'Contact Us'}
                     </Button>
                   </Card>
                 </motion.div>
@@ -188,11 +188,7 @@ export default function Pricing() {
               },
               {
                 question: 'Is there a free trial?',
-                answer: 'Yes! All plans come with a 14-day free trial. No credit card required to start.',
-              },
-              {
-                question: 'Do you offer refunds?',
-                answer: 'We offer a 30-day money-back guarantee. If you\'re not satisfied, contact us for a full refund.',
+                answer: 'Yes! All plans come with a 7-day free trial. No credit card required to start.',
               },
             ].map((faq, index) => (
               <motion.div
@@ -238,7 +234,7 @@ export default function Pricing() {
               </p>
               <div className="flex justify-center items-center">
                 <Button variant="secondary" size="lg" href="/contact" className="bg-white text-plum-900 border-0 hover:bg-cream-100">
-                  Get Started
+                  Contact Us
                 </Button>
               </div>
             </div>
