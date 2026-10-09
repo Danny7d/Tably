@@ -28,7 +28,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.05 }}
             className="inline-flex items-center gap-2 bg-plum-50 border border-plum-200/60 text-plum-600 text-sm font-medium px-5 py-2 rounded-full mb-8"
           >
-            Now available
+            Built for restaurants in Ethiopia & beyond
           </motion.div>
 
           <motion.h1
@@ -46,10 +46,19 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lg lg:text-xl text-charcoal-400 mb-11 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg lg:text-xl text-charcoal-400 mb-4 max-w-2xl mx-auto leading-relaxed"
           >
-            Tably is the modern operations platform that helps restaurants streamline ordering,
-            manage staff, and track analytics. All in one place.
+            QR table ordering, kitchen display, and staff tools for independent restaurants
+            and multi-location groups — all in one place. No guest app required.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="text-sm text-charcoal-400 mb-11 max-w-xl mx-auto"
+          >
+            For busy floors that need faster tickets — and operators who need one dashboard across branches.
           </motion.p>
 
           <motion.div
@@ -58,8 +67,11 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button variant="primary" size="lg" href="/contact">
-              Contact Us
+            <Button variant="primary" size="lg" href="/contact?subject=Book%20a%20demo">
+              Book a demo
+            </Button>
+            <Button variant="secondary" size="lg" href="/demo">
+              See how it works
             </Button>
           </motion.div>
         </motion.div>
@@ -89,7 +101,7 @@ const Hero = () => {
             <div className="p-5 lg:p-7 bg-gradient-to-br from-white to-cream-100">
               <div className="grid grid-cols-3 gap-4 mb-6">
                 <div className="bg-white p-4 lg:p-5 rounded-2xl shadow-soft border border-cream-300/40">
-                  <div className="text-xs font-medium text-charcoal-400 mb-1.5">Today&apos;s Orders</div>
+                  <div className="text-xs font-medium text-charcoal-400 mb-1.5">Today's Orders</div>
                   <div className="text-2xl font-bold text-charcoal-900">247</div>
                   <div className="text-xs font-medium text-sage-600 mt-1.5 flex items-center gap-1">
                     <span className="inline-block w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[5px] border-b-sage-500" />
