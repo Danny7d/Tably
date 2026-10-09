@@ -26,7 +26,7 @@ export const features = [
   },
   {
     title: 'Staff Management',
-    description: 'Schedule shifts, track performance, and manage your team.',
+    description: 'Assign roles, track performance, and keep your floor and kitchen in sync.',
     icon: 'Users',
   },
 ];
@@ -41,26 +41,33 @@ export const howItWorks = [
   { step: 7, title: 'Track analytics', description: 'Monitor performance and grow' },
 ];
 
+/**
+ * Early-stage social proof. Prefer honest framing over invented customers.
+ * Replace with real quotes as soon as you have them.
+ */
 export const testimonials = [
   {
-    name: 'Sarah Chen',
-    role: 'Owner',
-    company: 'Golden Dragon',
-    content: 'Tably transformed our operations. Orders are up 40% and our staff loves the simplicity.',
+    name: 'Built for busy floors',
+    role: 'Independent restaurants',
+    company: 'Addis Ababa & beyond',
+    content:
+      'QR ordering, kitchen display, and staff tools in one place — so your team spends less time chasing tickets and more time serving guests.',
     rating: 5,
   },
   {
-    name: 'Marcus Rodriguez',
-    role: 'Manager',
-    company: 'Bella Italia',
-    content: 'The analytics alone are worth it. We finally understand our peak hours and menu performance.',
+    name: 'Multi-location ready',
+    role: 'Restaurant groups',
+    company: 'One dashboard',
+    content:
+      'Run several branches from a single account. Menus, staff, and analytics stay organized per location without juggling separate systems.',
     rating: 5,
   },
   {
-    name: 'Emily Watson',
-    role: 'Director',
-    company: 'Urban Kitchen Group',
-    content: 'Managing 5 locations used to be a nightmare. Now I have everything in one dashboard.',
+    name: 'No guest app required',
+    role: 'Your customers',
+    company: 'Browser only',
+    content:
+      'Guests scan a table QR and order in the browser. No downloads, no friction — just a faster path from seat to kitchen.',
     rating: 5,
   },
 ];
@@ -68,27 +75,33 @@ export const testimonials = [
 export const faqs = [
   {
     question: 'How long does it take to get started?',
-    answer: 'Within 24 hours. Our team will help you set up your menu, generate QR codes, and train your staff.',
+    answer:
+      'Most restaurants are live within 24 hours. We help you set up your menu, generate table QR codes, and walk your staff through the kitchen and waiter tools.',
   },
   {
     question: 'Do customers need to download an app?',
-    answer: 'No! Tably works entirely through the browser. Customers simply scan a QR code and can order immediately without any app installation.',
+    answer:
+      'No. Tably works entirely in the browser. Customers scan a QR code at the table and order immediately — no app install.',
   },
   {
     question: 'Can I use my existing menu?',
-    answer: 'Absolutely. We can import your existing menu or help you create a new one. Our system supports categories, modifiers, and custom pricing.',
+    answer:
+      'Yes. We can import your existing menu or help you build one. Categories, modifiers, and custom pricing are supported.',
   },
   {
     question: 'What hardware do I need?',
-    answer: 'Tably works on any device with a web browser. For kitchen displays, we recommend tablets, but you can also use existing POS hardware.',
+    answer:
+      'Any device with a web browser. Kitchen displays work well on tablets; you can also use existing screens or POS hardware.',
   },
   {
-    question: 'Is my data secure?',
-    answer: 'Yes. We use bank-level encryption, regular security audits, and comply with all major data protection regulations including GDPR.',
+    question: 'Who is Tably for?',
+    answer:
+      'Independent restaurants that want QR table ordering and a clear kitchen flow, and multi-location groups that need one dashboard for branches, staff, and analytics.',
   },
   {
     question: 'Can I manage multiple locations?',
-    answer: 'Yes. Our Growth and Enterprise plans support multi-location management with centralized control and location-specific reporting.',
+    answer:
+      'Yes. Growth and Enterprise plans support multi-location management with centralized control and location-specific reporting.',
   },
 ];
 
