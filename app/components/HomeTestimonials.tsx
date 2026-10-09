@@ -26,10 +26,10 @@ export default function HomeTestimonials({ testimonials }: HomeTestimonialsProps
     >
       <div className="w-12 h-1.5 bg-gradient-gold rounded-full mx-auto mb-4" />
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal-900 mb-4 font-heading tracking-tight">
-        Loved by restaurant owners
+        Built for real restaurant floors
       </h2>
       <p className="text-lg text-charcoal-500 max-w-2xl mx-auto leading-relaxed">
-        See what our customers have to say
+        Designed with independent restaurants and multi-location operators in mind — from QR order to kitchen ticket to analytics.
       </p>
       <div className="grid md:grid-cols-3 gap-8 mt-12">
         {testimonials.map((testimonial, index) => (
@@ -56,7 +56,7 @@ export default function HomeTestimonials({ testimonials }: HomeTestimonialsProps
                 </div>
                 <div>
                   <div className="font-bold text-charcoal-900 text-sm font-heading">{testimonial.name}</div>
-                  <div className="text-xs text-charcoal-400">{testimonial.role}, {testimonial.company}</div>
+                  <div className="text-xs text-charcoal-400">{testimonial.role} · {testimonial.company}</div>
                 </div>
               </div>
             </Card>
