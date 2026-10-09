@@ -18,11 +18,25 @@ export default function HomeCTA() {
           Ready to modernize your restaurant?
         </h2>
         <p className="text-lg text-cream-100/90 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Join thousands of restaurants already using Tably to streamline their operations.
+          Whether you run one location or several, we'll help you go live with QR ordering,
+          kitchen display, and staff tools — usually within a day.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="secondary" size="lg" href="/contact" className="bg-white text-plum-900 border-0 hover:bg-cream-100">
-            Contact Us
+          <Button
+            variant="secondary"
+            size="lg"
+            href="/contact?subject=Book%20a%20demo"
+            className="bg-white text-plum-900 border-0 hover:bg-cream-100"
+          >
+            Book a demo
+          </Button>
+          <Button
+            variant="secondary"
+            size="lg"
+            href="/demo"
+            className="bg-transparent text-white border border-white/40 hover:bg-white/10"
+          >
+            See how it works
           </Button>
         </div>
       </div>
