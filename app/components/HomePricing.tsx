@@ -32,7 +32,7 @@ export default function HomePricing({ plans }: HomePricingProps) {
           Simple, transparent pricing
         </h2>
         <p className="text-lg text-charcoal-500 max-w-2xl mx-auto leading-relaxed">
-          Start here, scale as you grow
+          Start with one location. Scale to multi-branch when you're ready.
         </p>
       </motion.div>
       <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch mt-12">
@@ -48,8 +48,8 @@ export default function HomePricing({ plans }: HomePricingProps) {
               className="flex"
             >
               <Card className={`p-8 w-full flex flex-col justify-between ${
-                isPopular 
-                  ? 'border-2 border-plum-400 shadow-glow-plum/20 relative scale-[1.02] md:scale-[1.03]' 
+                isPopular
+                  ? 'border-2 border-plum-400 shadow-glow-plum/20 relative scale-[1.02] md:scale-[1.03]'
                   : 'border border-cream-300/60 shadow-card'
               }`}>
                 {isPopular && (
@@ -79,9 +79,13 @@ export default function HomePricing({ plans }: HomePricingProps) {
                 <Button
                   variant={isPopular ? 'primary' : 'secondary'}
                   className="w-full mt-auto"
-                  href={plan.name === 'Enterprise' ? '/contact?subject=Enterprise%20inquiry' : '/contact'}
+                  href={
+                    plan.name === 'Enterprise'
+                      ? '/contact?subject=Enterprise%20inquiry'
+                      : '/contact?subject=Book%20a%20demo'
+                  }
                 >
-                  {plan.name === 'Enterprise' ? 'Talk to Sales' : 'Contact Us'}
+                  {plan.name === 'Enterprise' ? 'Talk to sales' : 'Book a demo'}
                 </Button>
               </Card>
             </motion.div>
