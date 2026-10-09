@@ -33,8 +33,8 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? 'glass shadow-card border-b border-cream-300/40' 
+        scrolled
+          ? 'glass shadow-card border-b border-cream-300/40'
           : 'bg-transparent'
       }`}
     >
@@ -57,8 +57,8 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 className={`relative px-4 py-2 text-sm font-medium rounded-xl transition-all duration-200 ${
-                  pathname === item.href 
-                    ? 'text-plum-600 bg-plum-50' 
+                  pathname === item.href
+                    ? 'text-plum-600 bg-plum-50'
                     : 'text-charcoal-500 hover:text-charcoal-900 hover:bg-cream-200/60'
                 }`}
               >
@@ -70,10 +70,10 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
-              href="/contact"
+              href="/contact?subject=Book%20a%20demo"
               className="bg-gradient-button text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow-glow-plum/30 hover:shadow-glow-plum hover:-translate-y-0.5 transition-all duration-300"
             >
-              Contact Us
+              Book a demo
             </Link>
           </div>
 
@@ -122,11 +122,11 @@ const Navbar = () => {
               ))}
               <div className="pt-4 mt-3 border-t border-cream-300/60 space-y-3">
                 <Link
-                  href="/contact"
+                  href="/contact?subject=Book%20a%20demo"
                   onClick={() => setIsOpen(false)}
                   className="block bg-gradient-button text-white px-6 py-3.5 rounded-xl text-center font-semibold shadow-glow-plum/30 transition-all duration-300"
                 >
-                  Contact Us
+                  Book a demo
                 </Link>
               </div>
             </div>
