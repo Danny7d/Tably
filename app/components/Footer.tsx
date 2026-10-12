@@ -10,6 +10,7 @@ const Footer = () => {
       { name: 'Pricing', href: '/pricing' },
       { name: 'Demo', href: '/demo' },
       { name: 'Docs', href: '/docs' },
+      { name: 'QR ordering in Addis', href: '/qr-ordering-addis' },
     ],
     company: [
       { name: 'About', href: '/about' },
@@ -24,18 +25,14 @@ const Footer = () => {
     ],
   };
 
-
   return (
     <footer className="relative bg-plum-950 text-white overflow-hidden">
-      {/* Decorative gradient top border */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-plum-500/50 to-transparent" />
-      
-      {/* Subtle glow */}
+
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-[20rem] bg-plum-600/8 rounded-full blur-[100px]" />
 
       <div className="container-custom py-16 lg:py-20 relative">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12 mb-14">
-          {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -43,12 +40,25 @@ const Footer = () => {
             >
               Tably
             </motion.div>
-            <p className="text-charcoal-300 text-sm mb-6 leading-relaxed">
-              Modern restaurant operations platform.
+            <p className="text-charcoal-300 text-sm mb-3 leading-relaxed">
+              QR table ordering and restaurant management for Addis Ababa and Ethiopia.
+            </p>
+            <p className="text-charcoal-400 text-sm">
+              <a href="tel:+251937505084" className="hover:text-white transition-colors">
+                +251 93 750 5084
+              </a>
+              <br />
+              <a
+                href="https://t.me/TablyContact"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                Telegram @TablyContact
+              </a>
             </p>
           </div>
 
-          {/* Product */}
           <div>
             <h3 className="font-semibold mb-5 text-sm uppercase tracking-wider text-charcoal-300">Product</h3>
             <ul className="space-y-3">
@@ -65,7 +75,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company */}
           <div>
             <h3 className="font-semibold mb-5 text-sm uppercase tracking-wider text-charcoal-300">Company</h3>
             <ul className="space-y-3">
@@ -82,7 +91,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
           <div>
             <h3 className="font-semibold mb-5 text-sm uppercase tracking-wider text-charcoal-300">Resources</h3>
             <ul className="space-y-3">
@@ -99,7 +107,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
             <h3 className="font-semibold mb-5 text-sm uppercase tracking-wider text-charcoal-300">Legal</h3>
             <ul className="space-y-3">
@@ -117,10 +124,9 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="pt-8 border-t border-charcoal-700/50 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-charcoal-400 text-sm">
-            © {new Date().getFullYear()} Tably. All rights reserved.
+            © {new Date().getFullYear()} Tably. All rights reserved. · Addis Ababa, Ethiopia
           </p>
           <div className="flex gap-8 text-sm text-charcoal-400">
             <Link href="/privacy" className="hover:text-white transition-colors duration-200">

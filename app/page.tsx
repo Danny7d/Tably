@@ -14,20 +14,30 @@ import JsonLd from './components/JsonLd';
 import { features, howItWorks, testimonials, faqs, plans } from './lib/home-data';
 
 export const metadata: Metadata = {
-  title: 'Tably - Modern Restaurant Operations Platform | QR Ordering & Kitchen Display',
-  description: 'Streamline your restaurant operations with QR ordering, kitchen display systems, and powerful analytics. The all-in-one platform for modern restaurants, cafes, and food businesses.',
-  keywords: ['restaurant management', 'QR ordering', 'kitchen display system', 'restaurant analytics', 'POS system', 'digital menu', 'table management', 'restaurant software'],
+  title: 'Tably — QR Table Ordering & Restaurant Management in Addis Ababa',
+  description:
+    'QR table ordering, kitchen display, and staff tools for restaurants in Addis Ababa and Ethiopia. Guests scan at the table; orders go straight to the kitchen. No guest app required.',
+  keywords: [
+    'QR table ordering Addis Ababa',
+    'restaurant ordering system Ethiopia',
+    'kitchen display system',
+    'QR menu Addis',
+    'restaurant management software Ethiopia',
+    'digital menu restaurant',
+    'Tably',
+  ],
   alternates: {
     canonical: 'https://tably.site',
   },
   openGraph: {
-    title: 'Tably - Modern Restaurant Operations Platform',
-    description: 'Streamline your restaurant operations with QR ordering, kitchen display systems, and powerful analytics.',
+    title: 'Tably — QR Table Ordering for Restaurants in Addis Ababa',
+    description:
+      'Streamline ordering with QR at the table, kitchen display, and live tracking. Built for restaurants in Ethiopia.',
     url: 'https://tably.site',
     siteName: 'Tably',
     images: [
       {
-        url: 'https://tably.site/og-image.jpg',
+        url: 'https://tably.site/tably-main-logo.jpg',
         width: 1200,
         height: 630,
         alt: 'Tably Restaurant Management Platform',
@@ -36,8 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tably - Modern Restaurant Operations Platform',
-    description: 'Streamline your restaurant operations with QR ordering, kitchen display systems, and powerful analytics.',
+    title: 'Tably — QR Table Ordering for Restaurants in Addis Ababa',
+    description:
+      'QR ordering, kitchen display, and analytics for restaurants in Ethiopia.',
   },
 };
 
@@ -53,25 +64,28 @@ const jsonLd = {
     priceCurrency: 'ETB',
     description: 'Starting at 8,999 ETB/month',
   },
-  description: 'Modern restaurant operations platform with QR ordering, kitchen display systems, and powerful analytics.',
+  description:
+    'QR table ordering, kitchen display, waiter tools, and analytics for restaurants in Addis Ababa, Ethiopia.',
   url: 'https://tably.site',
   author: {
     '@type': 'Organization',
     name: 'Tably',
     url: 'https://tably.site',
   },
+  areaServed: [
+    { '@type': 'City', name: 'Addis Ababa' },
+    { '@type': 'Country', name: 'Ethiopia' },
+  ],
 };
 
 export default function Home() {
-
   return (
     <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
       <JsonLd data={jsonLd} />
       <Navbar />
-      
+
       <Hero />
 
-      {/* Features */}
       <Section background="white" className="relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-plum-100/30 rounded-full blur-[120px] pointer-events-none" />
         <Container className="relative z-10">
@@ -79,7 +93,6 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* How It Works */}
       <Section background="ivory" className="relative overflow-hidden">
         <div className="blob bg-gold-200/40 w-80 h-80 top-1/4 -right-20 animate-blob" style={{ animationDelay: '1s' }} />
         <Container className="relative z-10">
@@ -87,7 +100,6 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* Pricing Preview */}
       <Section background="white" className="relative overflow-hidden">
         <div className="blob bg-plum-100/40 w-96 h-96 -bottom-20 -left-20 animate-blob" style={{ animationDelay: '4s' }} />
         <Container className="relative z-10">
@@ -95,7 +107,6 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* Testimonials */}
       <Section background="ivory" className="relative overflow-hidden">
         <div className="blob bg-gold-100/30 w-80 h-80 top-10 left-10 animate-blob" />
         <Container className="relative z-10">
@@ -103,17 +114,14 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* FAQ */}
       <Section background="white" className="relative overflow-hidden">
         <Container className="relative z-10">
           <HomeFAQ faqs={faqs} />
         </Container>
       </Section>
 
-      {/* FAQ -> CTA transition */}
       <div className="section-divider" />
 
-      {/* CTA */}
       <Section background="white" className="py-12 lg:py-20 relative overflow-hidden">
         <Container>
           <HomeCTA />
