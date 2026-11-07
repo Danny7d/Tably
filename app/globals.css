@@ -6,10 +6,12 @@
        base 1   cream      → page backgrounds
        base 2   plum       → brand: accents, links, active nav, focus, CTA panels
        text     charcoal   → body text and structure (neutral, not a brand color)
-       pop      gold       → buttons/CTAs, always with charcoal text (never white)
+       pop      gold       → attention: primary buttons, badges, accent bars,
+                             recommended/popular treatment, key highlights
+                             Always charcoal text on gold (never white on gold)
        semantic sage = success, rose = error/destructive
-     Gold stays off big surfaces and off text. White text goes on plum,
-     charcoal text goes on gold. Tiny garnish (stars, badge, accent bars) is fine. */
+     Gold stays off big surfaces and body text. White text goes on plum,
+     charcoal text goes on gold. */
   --color-cream-50: #FEFDFB;
   --color-cream-100: #FAF8F5;
   --color-cream-200: #F5F1EC;
@@ -245,7 +247,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, var(--color-gold-400) 0%, var(--color-gold-500) 100%);
 }
 
-/* The "press me" color: charcoal text on this is 8.5-10:1 */
+/* The "press me" / attention color: charcoal text on this is 8.5-10:1 */
 .bg-gradient-pop {
   background: linear-gradient(135deg, var(--color-gold-400) 0%, var(--color-gold-500) 100%);
 }

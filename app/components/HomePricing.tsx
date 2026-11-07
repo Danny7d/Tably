@@ -27,7 +27,7 @@ export default function HomePricing({ plans }: HomePricingProps) {
         viewport={{ once: true }}
         className="text-center mb-16 max-w-3xl mx-auto"
       >
-        <div className="w-12 h-1.5 bg-gradient-button rounded-full mx-auto mb-4" />
+        <div className="w-12 h-1.5 bg-gradient-gold rounded-full mx-auto mb-4" />
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal-900 mb-4 font-heading tracking-tight">
           Simple, transparent pricing
         </h2>
@@ -49,7 +49,7 @@ export default function HomePricing({ plans }: HomePricingProps) {
             >
               <Card className={`p-8 w-full flex flex-col justify-between ${
                 isPopular
-                  ? 'border-2 border-plum-400 shadow-glow-plum/20 relative scale-[1.02] md:scale-[1.03]'
+                  ? 'border-2 border-gold-400 shadow-glow-gold/25 relative scale-[1.02] md:scale-[1.03]'
                   : 'border border-cream-300/60 shadow-card'
               }`}>
                 {isPopular && (

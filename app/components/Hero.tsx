@@ -26,6 +26,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.05 }}
             className="inline-flex items-center gap-2 bg-plum-50 border border-plum-200/60 text-plum-600 text-sm font-medium px-5 py-2 rounded-full mb-8"
           >
+            <span className="w-2 h-2 rounded-full bg-gold-400 shrink-0" />
             Built for restaurants in Addis Ababa & Ethiopia
           </motion.div>
 
@@ -102,7 +103,7 @@ const Hero = () => {
                     +12% from yesterday
                   </div>
                 </div>
-                <div className="bg-white p-4 lg:p-5 rounded-2xl shadow-soft border border-cream-300/40">
+                <div className="bg-white p-4 lg:p-5 rounded-2xl shadow-soft border border-gold-300/60 border-l-4 border-l-gold-400">
                   <div className="text-xs font-medium text-charcoal-400 mb-1.5">Revenue</div>
                   <div className="text-2xl font-bold text-charcoal-900">429,420 ETB</div>
                   <div className="text-xs font-medium text-sage-600 mt-1.5 flex items-center gap-1">
