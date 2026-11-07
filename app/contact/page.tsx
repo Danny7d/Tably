@@ -75,7 +75,7 @@ function ContactForm() {
       <Section background="ivory" className="relative pt-36 pb-20 overflow-hidden noise-bg border-b border-cream-300/40">
         <div className="absolute inset-0 bg-gradient-hero opacity-80" />
         <div className="blob bg-plum-300/30 w-[30rem] h-[30rem] top-10 -right-20 animate-blob" />
-        <div className="blob bg-gold-200/30 w-[24rem] h-[24rem] bottom-10 -left-20 animate-blob" style={{ animationDelay: '2s' }} />
+        <div className="blob bg-plum-200/30 w-[24rem] h-[24rem] bottom-10 -left-20 animate-blob" style={{ animationDelay: '2s' }} />
 
         <Container className="relative z-10">
           <motion.div
