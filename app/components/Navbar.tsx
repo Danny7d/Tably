@@ -71,7 +71,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/contact?subject=Book%20a%20demo"
-              className="bg-gradient-button text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow-glow-plum/30 hover:shadow-glow-plum hover:-translate-y-0.5 transition-all duration-300"
+              className="bg-gradient-pop text-charcoal-900 ring-1 ring-inset ring-gold-600/30 px-6 py-2.5 rounded-xl text-sm font-semibold shadow-glow-gold/30 hover:shadow-glow-gold hover:-translate-y-0.5 transition-all duration-300"
             >
               Book a demo
             </Link>
@@ -124,7 +124,7 @@ const Navbar = () => {
                 <Link
                   href="/contact?subject=Book%20a%20demo"
                   onClick={() => setIsOpen(false)}
-                  className="block bg-gradient-button text-white px-6 py-3.5 rounded-xl text-center font-semibold shadow-glow-plum/30 transition-all duration-300"
+                  className="block bg-gradient-pop text-charcoal-900 ring-1 ring-inset ring-gold-600/30 px-6 py-3.5 rounded-xl text-center font-semibold shadow-glow-gold/30 transition-all duration-300"
                 >
                   Book a demo
                 </Link>

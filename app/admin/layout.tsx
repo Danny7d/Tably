@@ -67,7 +67,7 @@ export default function AdminLayout({
             {error && <p className="text-red-500 text-sm">{error}</p>}
             <button
               type="submit"
-              className="w-full bg-gradient-button text-white px-6 py-3 rounded-xl font-semibold shadow-glow-plum/30 hover:shadow-glow-plum hover:-translate-y-0.5 transition-all duration-300"
+              className="w-full bg-gradient-pop text-charcoal-900 px-6 py-3 rounded-xl font-semibold shadow-glow-gold/30 hover:shadow-glow-gold hover:-translate-y-0.5 transition-all duration-300"
             >
               Login
             </button>

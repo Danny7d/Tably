@@ -32,7 +32,7 @@ const Button = ({
   const baseStyles = `inline-flex items-center justify-center font-semibold rounded-2xl transition-all duration-300 ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`;
   
   const variants = {
-    primary: 'bg-gradient-button text-white shadow-glow-plum/40 hover:shadow-glow-plum hover:-translate-y-0.5 active:translate-y-0',
+    primary: 'bg-gradient-pop text-charcoal-900 ring-1 ring-inset ring-gold-600/30 shadow-glow-gold/40 hover:shadow-glow-gold hover:-translate-y-0.5 active:translate-y-0',
     secondary: 'bg-cream-50 text-charcoal-900 border border-cream-400 hover:border-plum-200 hover:bg-white shadow-soft hover:shadow-card',
     outline: 'bg-transparent text-plum-600 border-2 border-plum-200 hover:bg-plum-50 hover:border-plum-400',
   };
