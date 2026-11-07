@@ -234,7 +234,7 @@ export default function Pricing() {
                 Get started today and see the difference Tably can make for your restaurant.
               </p>
               <div className="flex justify-center items-center">
-                <Button variant="secondary" size="lg" href="/contact" className="bg-white text-plum-900 border-0 hover:bg-cream-100">
+                <Button variant="primary" size="lg" href="/contact">
                   Contact Us
                 </Button>
               </div>
