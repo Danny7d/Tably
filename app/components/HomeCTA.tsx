@@ -23,10 +23,9 @@ export default function HomeCTA() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
-            variant="secondary"
+            variant="primary"
             size="lg"
             href="/contact?subject=Book%20a%20demo"
-            className="bg-white text-plum-900 border-0 hover:bg-cream-100"
           >
             Book a demo
           </Button>

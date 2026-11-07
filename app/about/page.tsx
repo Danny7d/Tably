@@ -212,7 +212,7 @@ export default function About() {
               <p className="text-lg text-cream-100/90 max-w-2xl mx-auto mb-10 leading-relaxed">
                 We're always looking for talented people who share our vision.
               </p>
-              <Button variant="secondary" size="lg" href="/contact" className="bg-white text-plum-900 border-0 hover:bg-cream-100">
+              <Button variant="primary" size="lg" href="/contact">
                 Get in Touch
               </Button>
             </div>
