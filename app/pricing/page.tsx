@@ -43,6 +43,7 @@ export default function Pricing() {
             className="text-center max-w-3xl mx-auto"
           >
             <div className="inline-flex items-center gap-2 bg-plum-50 border border-plum-200/60 text-plum-600 text-sm font-medium px-5 py-2 rounded-full mb-6">
+              <span className="w-2 h-2 rounded-full bg-gold-400 shrink-0" />
               Simple & Fair Plans
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-charcoal-900 mb-6 font-heading tracking-tight leading-[1.1]">
@@ -104,7 +105,7 @@ export default function Pricing() {
                 >
                   <Card className={`p-8 w-full flex flex-col justify-between ${
                     isPopular 
-                      ? 'border-2 border-plum-400 shadow-glow-plum/20 relative scale-[1.02] md:scale-[1.03]' 
+                      ? 'border-2 border-gold-400 shadow-glow-gold/25 relative scale-[1.02] md:scale-[1.03]' 
                       : 'border border-cream-300/60 shadow-card'
                   }`}>
                     {isPopular && (
