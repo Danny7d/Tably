@@ -121,7 +121,7 @@ export default function Demo() {
 
       {/* Demo Process */}
       <Section background="gray" className="relative overflow-hidden border-t border-cream-300/30">
-        <div className="blob bg-gold-100/40 w-96 h-96 -bottom-20 -right-20 animate-blob" />
+        <div className="blob bg-plum-100/40 w-96 h-96 -bottom-20 -right-20 animate-blob" />
 
         <Container className="relative z-10">
           <motion.div
@@ -141,7 +141,7 @@ export default function Demo() {
             </div>
 
             <div className="relative pl-10 md:pl-0 max-w-xl mx-auto">
-              <div className="absolute left-[19px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-plum-300 via-gold-300 to-cream-300" />
+              <div className="absolute left-[19px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-plum-300 via-plum-200 to-cream-300" />
 
               <div className="space-y-8 relative">
                 {[

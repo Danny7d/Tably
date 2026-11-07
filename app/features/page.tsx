@@ -127,7 +127,7 @@ export default function Features() {
       <Section background="ivory" className="relative pt-36 pb-20 overflow-hidden noise-bg border-b border-cream-300/40">
         <div className="absolute inset-0 bg-gradient-hero opacity-80" />
         <div className="blob bg-plum-300/30 w-[30rem] h-[30rem] top-10 -right-20 animate-blob" />
-        <div className="blob bg-gold-200/30 w-[24rem] h-[24rem] bottom-10 -left-20 animate-blob" style={{ animationDelay: '2s' }} />
+        <div className="blob bg-plum-200/30 w-[24rem] h-[24rem] bottom-10 -left-20 animate-blob" style={{ animationDelay: '2s' }} />
 
         <Container className="relative z-10">
           <motion.div
@@ -211,7 +211,7 @@ export default function Features() {
             viewport={{ once: true }}
             className="text-center relative overflow-hidden rounded-[2.5rem] bg-gradient-cta p-12 md:p-20 shadow-glow-plum/30"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-gold-400),transparent_50%)] opacity-30 pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-plum-300),transparent_50%)] opacity-30 pointer-events-none" />
             <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-plum-400/20 rounded-full blur-[80px] pointer-events-none" />
             
             <div className="relative z-10 max-w-3xl mx-auto">
