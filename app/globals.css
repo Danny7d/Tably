@@ -1,7 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Warm Dusk Palette ── */
+  /* ── Warm Dusk Palette ──
+     Color roles (the 90/10 rule):
+       90%  cream + charcoal  → backgrounds, text, structure
+       brand + every CTA      → plum (buttons, links, focus, active states)
+       garnish, sparingly     → gold (small badges, stars, thin accent bars only)
+       semantic only          → sage = success, rose = error/destructive
+     Don't use gold for big surfaces, gradients on text, or buttons. */
   --color-cream-50: #FEFDFB;
   --color-cream-100: #FAF8F5;
   --color-cream-200: #F5F1EC;
@@ -137,6 +143,12 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-plum-900);
 }
 
+/* ── Focus (brand color lives on interactive states) ── */
+:focus-visible {
+  outline: 2px solid var(--color-plum-500);
+  outline-offset: 2px;
+}
+
 /* ── Utilities ── */
 .noise-bg {
   position: relative;
@@ -201,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-plum-500), var(--color-plum-400), var(--color-gold-500));
+  background: linear-gradient(135deg, var(--color-plum-600), var(--color-plum-500), var(--color-plum-400));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -215,15 +227,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-gradient-hero {
-  background: linear-gradient(145deg, var(--color-cream-100) 0%, var(--color-plum-50) 40%, var(--color-cream-200) 70%, var(--color-gold-50) 100%);
+  background: linear-gradient(145deg, var(--color-cream-100) 0%, var(--color-plum-50) 40%, var(--color-cream-200) 100%);
 }
 
+/* Both stop at plum-500 so white text stays at 6:1+ contrast (plum-400 was 3.3:1) */
 .bg-gradient-cta {
-  background: linear-gradient(135deg, var(--color-plum-600) 0%, var(--color-plum-500) 40%, var(--color-plum-400) 100%);
+  background: linear-gradient(135deg, var(--color-plum-600) 0%, var(--color-plum-500) 100%);
 }
 
 .bg-gradient-button {
-  background: linear-gradient(135deg, var(--color-plum-600) 0%, var(--color-plum-500) 50%, var(--color-plum-400) 100%);
+  background: linear-gradient(135deg, var(--color-plum-600) 0%, var(--color-plum-500) 100%);
 }
 
 .bg-gradient-gold {

@@ -28,7 +28,7 @@ export default function HomeHowItWorks({ howItWorks }: HomeHowItWorksProps) {
         Get started in minutes, not days
       </p>
       <div className="relative max-w-2xl mx-auto mt-12">
-        <div className="absolute left-[21px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-plum-300 via-gold-300 to-cream-300" />
+        <div className="absolute left-[21px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-plum-300 via-plum-200 to-cream-300" />
         <div className="space-y-8 relative">
           {howItWorks.map((item, index) => (
             <motion.div

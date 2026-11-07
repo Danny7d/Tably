@@ -94,7 +94,7 @@ export default function Home() {
       </Section>
 
       <Section background="ivory" className="relative overflow-hidden">
-        <div className="blob bg-gold-200/40 w-80 h-80 top-1/4 -right-20 animate-blob" style={{ animationDelay: '1s' }} />
+        <div className="blob bg-plum-200/40 w-80 h-80 top-1/4 -right-20 animate-blob" style={{ animationDelay: '1s' }} />
         <Container className="relative z-10">
           <HomeHowItWorks howItWorks={howItWorks} />
         </Container>
@@ -108,7 +108,7 @@ export default function Home() {
       </Section>
 
       <Section background="ivory" className="relative overflow-hidden">
-        <div className="blob bg-gold-100/30 w-80 h-80 top-10 left-10 animate-blob" />
+        <div className="blob bg-plum-100/30 w-80 h-80 top-10 left-10 animate-blob" />
         <Container className="relative z-10">
           <HomeTestimonials testimonials={testimonials} />
         </Container>

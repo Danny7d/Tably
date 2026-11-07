@@ -11,7 +11,7 @@ const Hero = () => {
 
       <div className="blob bg-plum-400 w-[28rem] h-[28rem] top-16 -right-48 animate-blob" />
       <div className="blob bg-plum-300 w-[22rem] h-[22rem] bottom-20 -left-40 animate-blob" style={{ animationDelay: '3s' }} />
-      <div className="blob bg-gold-400 w-[18rem] h-[18rem] top-1/2 left-1/3 animate-blob" style={{ animationDelay: '6s' }} />
+      <div className="blob bg-plum-200 w-[18rem] h-[18rem] top-1/2 left-1/3 animate-blob" style={{ animationDelay: '6s' }} />
 
       <Container className="relative">
         <motion.div
@@ -44,7 +44,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lg lg:text-xl text-charcoal-400 mb-4 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg lg:text-xl text-charcoal-500 mb-4 max-w-2xl mx-auto leading-relaxed"
           >
             QR table ordering, kitchen display, and staff tools for independent restaurants
             and multi-location groups in Ethiopia — all in one place. No guest app required.
@@ -54,7 +54,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="text-sm text-charcoal-400 mb-11 max-w-xl mx-auto"
+            className="text-sm text-charcoal-500 mb-11 max-w-xl mx-auto"
           >
             For busy floors that need faster tickets — and operators who need one dashboard across branches.
           </motion.p>

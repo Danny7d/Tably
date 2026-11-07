@@ -51,7 +51,7 @@ export default function HomeTestimonials({ testimonials }: HomeTestimonialsProps
                 <p className="text-charcoal-500 leading-relaxed italic mb-6 text-[0.9375rem]">"{testimonial.content}"</p>
               </div>
               <div className="flex items-center mt-auto pt-4 border-t border-cream-300/40 relative z-10">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-plum-500 to-gold-400 flex items-center justify-center text-white font-extrabold text-sm mr-3 shadow-soft">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-plum-600 to-plum-500 flex items-center justify-center text-white font-extrabold text-sm mr-3 shadow-soft">
                   {testimonial.name[0]}
                 </div>
                 <div>
