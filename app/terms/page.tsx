@@ -8,12 +8,12 @@ import Container from '../components/Container';
 
 export default function Terms() {
   return (
-    <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+    <div className="min-h-screen selection:bg-navy-100 selection:text-navy-900">
       <Navbar />
       
       <Section background="ivory" className="relative pt-36 pb-20 overflow-hidden noise-bg border-b border-cream-300/40">
         <div className="absolute inset-0 bg-gradient-hero opacity-85" />
-        <div className="blob bg-plum-300/20 w-[30rem] h-[30rem] top-10 -right-20 animate-blob" />
+        <div className="blob bg-navy-300/20 w-[30rem] h-[30rem] top-10 -right-20 animate-blob" />
 
         <Container className="relative z-10">
           <motion.div
@@ -34,7 +34,7 @@ export default function Terms() {
             <div className="space-y-10 text-charcoal-500 leading-relaxed text-[0.9688rem] md:text-base">
               <section className="space-y-3">
                 <h2 className="text-xl sm:text-2xl font-bold text-charcoal-900 font-heading">1. Acceptance of Terms</h2>
-                <div className="w-8 h-1 bg-plum-500/60 rounded-full" />
+                <div className="w-8 h-1 bg-navy-500/60 rounded-full" />
                 <p className="pt-2">
                   By accessing or using Tably services, you agree to be bound by these Terms of Service. 
                   If you do not agree to these terms, please do not use our services.
@@ -43,7 +43,7 @@ export default function Terms() {
 
               <section className="space-y-3">
                 <h2 className="text-xl sm:text-2xl font-bold text-charcoal-900 font-heading">2. Description of Service</h2>
-                <div className="w-8 h-1 bg-plum-500/60 rounded-full" />
+                <div className="w-8 h-1 bg-navy-500/60 rounded-full" />
                 <p className="pt-2">
                   Tably provides a restaurant operations platform including QR ordering, kitchen display 
                   systems, analytics, and related services. We reserve the right to modify or discontinue 
@@ -53,7 +53,7 @@ export default function Terms() {
 
               <section className="space-y-3">
                 <h2 className="text-xl sm:text-2xl font-bold text-charcoal-900 font-heading">3. User Responsibilities</h2>
-                <div className="w-8 h-1 bg-plum-500/60 rounded-full" />
+                <div className="w-8 h-1 bg-navy-500/60 rounded-full" />
                 <p className="pt-2">
                   You are responsible for maintaining the confidentiality of your account information and 
                   for all activities that occur under your account. You agree to notify us immediately of 
@@ -63,7 +63,7 @@ export default function Terms() {
 
               <section className="space-y-3">
                 <h2 className="text-xl sm:text-2xl font-bold text-charcoal-900 font-heading">4. Payment Terms</h2>
-                <div className="w-8 h-1 bg-plum-500/60 rounded-full" />
+                <div className="w-8 h-1 bg-navy-500/60 rounded-full" />
                 <p className="pt-2">
                   Paid subscriptions are billed in advance on a monthly or annual basis. You agree to pay 
                   all charges incurred under your account. Refunds are provided in accordance with our 
@@ -73,7 +73,7 @@ export default function Terms() {
 
               <section className="space-y-3">
                 <h2 className="text-xl sm:text-2xl font-bold text-charcoal-900 font-heading">5. Intellectual Property</h2>
-                <div className="w-8 h-1 bg-plum-500/60 rounded-full" />
+                <div className="w-8 h-1 bg-navy-500/60 rounded-full" />
                 <p className="pt-2">
                   All content, features, and functionality of the Tably platform are owned by Tably and 
                   are protected by international copyright, trademark, and other intellectual property laws.
@@ -82,7 +82,7 @@ export default function Terms() {
 
               <section className="space-y-3">
                 <h2 className="text-xl sm:text-2xl font-bold text-charcoal-900 font-heading">6. Termination</h2>
-                <div className="w-8 h-1 bg-plum-500/60 rounded-full" />
+                <div className="w-8 h-1 bg-navy-500/60 rounded-full" />
                 <p className="pt-2">
                   We may terminate or suspend your account at any time for violation of these terms or 
                   for any other reason at our sole discretion. Upon termination, your right to use the 
@@ -92,7 +92,7 @@ export default function Terms() {
 
               <section className="space-y-3">
                 <h2 className="text-xl sm:text-2xl font-bold text-charcoal-900 font-heading">7. Limitation of Liability</h2>
-                <div className="w-8 h-1 bg-plum-500/60 rounded-full" />
+                <div className="w-8 h-1 bg-navy-500/60 rounded-full" />
                 <p className="pt-2">
                   Tably shall not be liable for any indirect, incidental, special, or consequential 
                   damages resulting from the use or inability to use our services.
@@ -101,10 +101,10 @@ export default function Terms() {
 
               <section className="space-y-3">
                 <h2 className="text-xl sm:text-2xl font-bold text-charcoal-900 font-heading">8. Contact</h2>
-                <div className="w-8 h-1 bg-plum-500/60 rounded-full" />
+                <div className="w-8 h-1 bg-navy-500/60 rounded-full" />
                 <p className="pt-2">
                   For questions about these Terms of Service, please contact us at{' '}
-                  <a href="mailto:legal@tably.site" className="text-plum-600 font-semibold hover:underline">
+                  <a href="mailto:legal@tably.site" className="text-navy-600 font-semibold hover:underline">
                     legal@tably.site
                   </a>
                 </p>

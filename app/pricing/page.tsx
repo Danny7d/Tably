@@ -25,15 +25,13 @@ export default function Pricing() {
   const [isAnnual, setIsAnnual] = useState(false);
 
   return (
-    <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+    <div className="min-h-screen selection:bg-navy-100 selection:text-navy-900">
       <JsonLd data={jsonLd} />
       <Navbar />
       
       {/* Hero */}
-      <Section background="ivory" className="relative pt-36 pb-20 overflow-hidden noise-bg border-b border-cream-300/40">
-        <div className="absolute inset-0 bg-gradient-hero opacity-80" />
-        <div className="blob bg-plum-300/30 w-[30rem] h-[30rem] top-10 -right-20 animate-blob" />
-        <div className="blob bg-plum-200/30 w-[24rem] h-[24rem] bottom-10 -left-20 animate-blob" style={{ animationDelay: '2s' }} />
+      <Section background="navy" className="relative pt-36 pb-20 lg:pb-24 overflow-hidden noise-bg rounded-b-[2.5rem] lg:rounded-b-[4rem]">
+        <div className="absolute inset-0 bg-hero-glow" />
 
         <Container className="relative z-10">
           <motion.div
@@ -42,14 +40,14 @@ export default function Pricing() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-center max-w-3xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 bg-plum-50 border border-plum-200/60 text-plum-600 text-sm font-medium px-5 py-2 rounded-full mb-6">
-              <span className="w-2 h-2 rounded-full bg-gold-400 shrink-0" />
+            <div className="inline-flex items-center gap-2 bg-white/[0.07] border border-white/15 backdrop-blur text-cream-100 text-sm font-medium px-5 py-2 rounded-full mb-6">
+              <span className="w-2 h-2 rounded-full bg-orange-400 shrink-0" />
               Simple & Fair Plans
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-charcoal-900 mb-6 font-heading tracking-tight leading-[1.1]">
-              Simple, <span className="text-gradient">transparent pricing</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 font-heading tracking-tight leading-[1.1]">
+              Simple, <span className="bg-gradient-to-r from-orange-400 via-orange-300 to-orange-400 bg-clip-text text-transparent">transparent pricing</span>
             </h1>
-            <p className="text-lg lg:text-xl text-charcoal-500 mb-10 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg lg:text-xl text-cream-200/85 mb-10 leading-relaxed max-w-2xl mx-auto">
               Start free, scale as you grow. No hidden fees, no surprises.
             </p>
 
@@ -59,7 +57,7 @@ export default function Pricing() {
                 onClick={() => setIsAnnual(false)}
                 className={`px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 cursor-pointer ${
                   !isAnnual 
-                    ? 'bg-plum-500 text-white shadow-soft' 
+                    ? 'bg-navy-500 text-white shadow-soft' 
                     : 'text-charcoal-500 hover:text-charcoal-900'
                 }`}
                 aria-label="Monthly pricing"
@@ -70,14 +68,14 @@ export default function Pricing() {
                 onClick={() => setIsAnnual(true)}
                 className={`px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${
                   isAnnual 
-                    ? 'bg-plum-500 text-white shadow-soft' 
+                    ? 'bg-navy-500 text-white shadow-soft' 
                     : 'text-charcoal-500 hover:text-charcoal-900'
                 }`}
                 aria-label="Annual pricing with discount"
               >
                 Annual
                 <span className={`text-[0.6875rem] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider transition-colors ${
-                  isAnnual ? 'bg-gold-400 text-charcoal-900' : 'bg-gold-100 text-gold-700'
+                  isAnnual ? 'bg-orange-400 text-charcoal-900' : 'bg-orange-100 text-orange-800'
                 }`}>
                   Save 10%
                 </span>
@@ -105,11 +103,11 @@ export default function Pricing() {
                 >
                   <Card className={`p-8 w-full flex flex-col justify-between ${
                     isPopular 
-                      ? 'border-2 border-gold-400 shadow-glow-gold/25 relative scale-[1.02] md:scale-[1.03]' 
+                      ? 'border-2 border-orange-400 shadow-glow-orange/25 relative scale-[1.02] md:scale-[1.03]' 
                       : 'border border-cream-300/60 shadow-card'
                   }`}>
                     {isPopular && (
-                      <div className="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-charcoal-900 text-xs font-bold px-4 py-1 rounded-full shadow-soft uppercase tracking-wide">
+                      <div className="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-gradient-orange text-charcoal-900 text-xs font-bold px-4 py-1 rounded-full shadow-soft uppercase tracking-wide">
                         Recommended
                       </div>
                     )}
@@ -139,8 +137,8 @@ export default function Pricing() {
                       <ul className="space-y-3.5 mb-8">
                         {plan.features.map((feature) => (
                           <li key={feature} className="flex items-start text-[0.9375rem] text-charcoal-500 leading-relaxed">
-                            <span className="shrink-0 w-5 h-5 bg-plum-50 rounded-full flex items-center justify-center mr-2.5 mt-0.5">
-                              <Check className="text-plum-600" size={13} />
+                            <span className="shrink-0 w-5 h-5 bg-navy-50 rounded-full flex items-center justify-center mr-2.5 mt-0.5">
+                              <Check className="text-navy-600" size={13} />
                             </span>
                             {feature}
                           </li>
@@ -171,7 +169,7 @@ export default function Pricing() {
             viewport={{ once: true }}
             className="text-center mb-16 max-w-3xl mx-auto"
           >
-            <div className="w-12 h-1.5 bg-gradient-gold rounded-full mx-auto mb-4" />
+            <div className="w-12 h-1.5 bg-gradient-orange rounded-full mx-auto mb-4" />
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal-900 mb-4 font-heading tracking-tight">
               Pricing questions
             </h2>
@@ -200,9 +198,9 @@ export default function Pricing() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
               >
-                <Card className="p-7 border-l-4 border-l-plum-500 shadow-soft">
+                <Card className="p-7 border-l-4 border-l-navy-500 shadow-soft">
                   <div className="flex gap-3 items-start">
-                    <HelpCircle className="text-plum-500 shrink-0 mt-0.5" size={20} />
+                    <HelpCircle className="text-navy-500 shrink-0 mt-0.5" size={20} />
                     <div>
                       <h3 className="text-lg font-bold text-charcoal-900 mb-2 font-heading">{faq.question}</h3>
                       <p className="text-charcoal-500 leading-relaxed text-[0.9375rem]">{faq.answer}</p>
@@ -222,10 +220,10 @@ export default function Pricing() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center relative overflow-hidden rounded-[2.5rem] bg-gradient-cta p-12 md:p-20 shadow-glow-plum/30"
+            className="text-center relative overflow-hidden rounded-[2.5rem] bg-gradient-cta p-12 md:p-20 shadow-glow-navy/30"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-plum-300),transparent_50%)] opacity-30 pointer-events-none" />
-            <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-plum-400/20 rounded-full blur-[80px] pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-navy-300),transparent_50%)] opacity-30 pointer-events-none" />
+            <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-navy-400/20 rounded-full blur-[80px] pointer-events-none" />
             
             <div className="relative z-10 max-w-3xl mx-auto">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5 font-heading tracking-tight leading-tight">

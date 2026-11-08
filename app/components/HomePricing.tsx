@@ -27,7 +27,7 @@ export default function HomePricing({ plans }: HomePricingProps) {
         viewport={{ once: true }}
         className="text-center mb-16 max-w-3xl mx-auto"
       >
-        <div className="w-12 h-1.5 bg-gradient-gold rounded-full mx-auto mb-4" />
+        <div className="w-12 h-1.5 bg-gradient-orange rounded-full mx-auto mb-4" />
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal-900 mb-4 font-heading tracking-tight">
           Simple, transparent pricing
         </h2>
@@ -49,11 +49,11 @@ export default function HomePricing({ plans }: HomePricingProps) {
             >
               <Card className={`p-8 w-full flex flex-col justify-between ${
                 isPopular
-                  ? 'border-2 border-gold-400 shadow-glow-gold/25 relative scale-[1.02] md:scale-[1.03]'
+                  ? 'border-2 border-orange-400 shadow-glow-orange/25 relative scale-[1.02] md:scale-[1.03]'
                   : 'border border-cream-300/60 shadow-card'
               }`}>
                 {isPopular && (
-                  <div className="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-gradient-gold text-charcoal-900 text-xs font-bold px-4 py-1 rounded-full shadow-soft uppercase tracking-wide">
+                  <div className="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-gradient-orange text-charcoal-900 text-xs font-bold px-4 py-1 rounded-full shadow-soft uppercase tracking-wide">
                     Recommended
                   </div>
                 )}
@@ -68,8 +68,8 @@ export default function HomePricing({ plans }: HomePricingProps) {
                   <ul className="space-y-3.5 mb-8">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start text-[0.9375rem] text-charcoal-500 leading-relaxed">
-                        <span className="shrink-0 w-5 h-5 bg-plum-50 rounded-full flex items-center justify-center mr-2.5 mt-0.5">
-                          <Check className="text-plum-600" size={13} />
+                        <span className="shrink-0 w-5 h-5 bg-navy-50 rounded-full flex items-center justify-center mr-2.5 mt-0.5">
+                          <Check className="text-navy-600" size={13} />
                         </span>
                         {feature}
                       </li>
@@ -93,7 +93,7 @@ export default function HomePricing({ plans }: HomePricingProps) {
         })}
       </div>
       <div className="text-center mt-10">
-        <Link href="/pricing" className="text-plum-600 font-bold hover:text-plum-700 hover:gap-2 inline-flex items-center group transition-all duration-300 text-[0.9375rem]">
+        <Link href="/pricing" className="text-navy-600 font-bold hover:text-navy-700 hover:gap-2 inline-flex items-center group transition-all duration-300 text-[0.9375rem]">
           View detailed pricing
           <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
         </Link>

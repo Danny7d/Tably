@@ -11,13 +11,12 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 
 export default function Demo() {
   return (
-    <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+    <div className="min-h-screen selection:bg-navy-100 selection:text-navy-900">
       <Navbar />
 
       {/* Hero */}
-      <Section background="white" className="relative pt-36 pb-16 overflow-hidden noise-bg">
-        <div className="absolute inset-0 bg-gradient-hero opacity-60" />
-        <div className="blob bg-plum-300/30 w-[30rem] h-[30rem] top-10 -right-20 animate-blob" />
+      <Section background="navy" className="relative pt-36 pb-20 lg:pb-24 overflow-hidden noise-bg rounded-b-[2.5rem] lg:rounded-b-[4rem]">
+        <div className="absolute inset-0 bg-hero-glow" />
 
         <Container className="relative z-10">
           <motion.div
@@ -26,20 +25,20 @@ export default function Demo() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-center max-w-3xl mx-auto animate-fade-up"
           >
-            <div className="inline-flex items-center gap-2 bg-plum-50 border border-plum-200/60 text-plum-600 text-sm font-medium px-5 py-2 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/[0.07] border border-white/15 backdrop-blur text-cream-100 text-sm font-medium px-5 py-2 rounded-full mb-6">
               Product tour
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-charcoal-900 mb-6 font-heading tracking-tight leading-[1.1]">
-              See Tably in <span className="text-gradient">action</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 font-heading tracking-tight leading-[1.1]">
+              See Tably in <span className="bg-gradient-to-r from-orange-400 via-orange-300 to-orange-400 bg-clip-text text-transparent">action</span>
             </h1>
-            <p className="text-lg lg:text-xl text-charcoal-500 mb-10 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg lg:text-xl text-cream-200/85 mb-10 leading-relaxed max-w-2xl mx-auto">
               From QR table order to kitchen ticket to multi-branch analytics — how Tably runs the floor.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="primary" size="lg" href="/contact?subject=Book%20a%20demo">
                 Book a demo
               </Button>
-              <Button variant="secondary" size="lg" href="#tour">
+              <Button variant="secondary" size="lg" href="#tour" className="bg-transparent text-white border border-white/40 hover:bg-white/10">
                 Watch the tour
               </Button>
             </div>
@@ -56,7 +55,7 @@ export default function Demo() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <Card className="aspect-video bg-plum-950 flex flex-col items-center justify-center relative overflow-hidden group shadow-elevated border border-plum-900/50">
+            <Card className="aspect-video bg-navy-950 flex flex-col items-center justify-center relative overflow-hidden group shadow-elevated border border-navy-900/50">
               <video
                 className="w-full h-full object-cover"
                 controls
@@ -106,8 +105,8 @@ export default function Demo() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
               >
-                <Card className="p-7 h-full flex flex-col items-start border border-cream-300/50 hover:border-plum-200">
-                  <span className="shrink-0 w-8 h-8 bg-plum-50 rounded-xl flex items-center justify-center mb-4 text-plum-600">
+                <Card className="p-7 h-full flex flex-col items-start border border-cream-300/50 hover:border-navy-200">
+                  <span className="shrink-0 w-8 h-8 bg-navy-50 rounded-xl flex items-center justify-center mb-4 text-navy-600">
                     <CheckCircle size={20} />
                   </span>
                   <h3 className="text-lg font-bold text-charcoal-900 mb-2 font-heading">{item.title}</h3>
@@ -121,7 +120,7 @@ export default function Demo() {
 
       {/* Demo Process */}
       <Section background="gray" className="relative overflow-hidden border-t border-cream-300/30">
-        <div className="blob bg-plum-100/40 w-96 h-96 -bottom-20 -right-20 animate-blob" />
+        <div className="blob bg-navy-100/40 w-96 h-96 -bottom-20 -right-20 animate-blob" />
 
         <Container className="relative z-10">
           <motion.div
@@ -131,7 +130,7 @@ export default function Demo() {
             className="max-w-3xl mx-auto"
           >
             <div className="text-center mb-16">
-              <div className="w-12 h-1.5 bg-gradient-gold rounded-full mx-auto mb-4" />
+              <div className="w-12 h-1.5 bg-gradient-orange rounded-full mx-auto mb-4" />
               <h2 className="text-3xl sm:text-4xl font-extrabold text-charcoal-900 mb-4 font-heading tracking-tight">
                 Prefer a live walkthrough?
               </h2>
@@ -141,7 +140,7 @@ export default function Demo() {
             </div>
 
             <div className="relative pl-10 md:pl-0 max-w-xl mx-auto">
-              <div className="absolute left-[19px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-plum-300 via-plum-200 to-cream-300" />
+              <div className="absolute left-[19px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-navy-300 via-navy-200 to-cream-300" />
 
               <div className="space-y-8 relative">
                 {[
@@ -151,11 +150,11 @@ export default function Demo() {
                   { step: 4, title: 'Q&A', description: 'Get your questions answered' },
                 ].map((item) => (
                   <div key={item.step} className="flex items-start group">
-                    <div className="shrink-0 w-10 h-10 bg-cream-50 border-2 border-plum-500 rounded-full flex items-center justify-center text-plum-600 font-extrabold text-sm z-10 shadow-soft group-hover:bg-plum-500 group-hover:text-white transition-all duration-300">
+                    <div className="shrink-0 w-10 h-10 bg-cream-50 border-2 border-navy-500 rounded-full flex items-center justify-center text-navy-600 font-extrabold text-sm z-10 shadow-soft group-hover:bg-navy-500 group-hover:text-white transition-all duration-300">
                       {item.step}
                     </div>
                     <div className="flex-1 ml-5 pt-1">
-                      <h3 className="text-lg font-bold text-charcoal-900 mb-1 group-hover:text-plum-600 transition-colors duration-300 font-heading">
+                      <h3 className="text-lg font-bold text-charcoal-900 mb-1 group-hover:text-navy-600 transition-colors duration-300 font-heading">
                         {item.title}
                       </h3>
                       <p className="text-charcoal-500 leading-relaxed text-[0.9375rem]">{item.description}</p>

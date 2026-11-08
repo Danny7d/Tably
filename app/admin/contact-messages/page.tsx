@@ -57,7 +57,7 @@ export default function ContactMessages() {
   }, []);
 
   return (
-    <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+    <div className="min-h-screen selection:bg-navy-100 selection:text-navy-900">
       <Navbar />
       
       {/* Hero */}
@@ -70,7 +70,7 @@ export default function ContactMessages() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 bg-plum-50 border border-plum-200/60 text-plum-600 text-sm font-medium px-5 py-2 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 bg-navy-50 border border-navy-200/60 text-navy-600 text-sm font-medium px-5 py-2 rounded-full mb-6">
               <Mail size={16} />
               Admin Dashboard
             </div>

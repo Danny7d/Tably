@@ -20,7 +20,7 @@ const jsonLd = {
 
 export default function Docs() {
   return (
-    <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+    <div className="min-h-screen selection:bg-navy-100 selection:text-navy-900">
       <JsonLd data={jsonLd} />
       <DocsContent />
     </div>
@@ -94,14 +94,12 @@ function DocsContent() {
   ];
 
   return (
-    <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+    <div className="min-h-screen selection:bg-navy-100 selection:text-navy-900">
       <Navbar />
       
       {/* Hero */}
-      <Section background="ivory" className="relative pt-36 pb-20 overflow-hidden noise-bg border-b border-cream-300/40">
-        <div className="absolute inset-0 bg-gradient-hero opacity-80" />
-        <div className="blob bg-plum-300/30 w-[30rem] h-[30rem] top-10 -right-20 animate-blob" />
-        <div className="blob bg-plum-200/30 w-[24rem] h-[24rem] bottom-10 -left-20 animate-blob" style={{ animationDelay: '2s' }} />
+      <Section background="navy" className="relative pt-36 pb-20 lg:pb-24 overflow-hidden noise-bg rounded-b-[2.5rem] lg:rounded-b-[4rem]">
+        <div className="absolute inset-0 bg-hero-glow" />
 
         <Container className="relative z-10">
           <motion.div
@@ -110,25 +108,25 @@ function DocsContent() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-center max-w-3xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 bg-plum-50 border border-plum-200/60 text-plum-600 text-sm font-medium px-5 py-2 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/[0.07] border border-white/15 backdrop-blur text-cream-100 text-sm font-medium px-5 py-2 rounded-full mb-6">
               Knowledge Base
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-charcoal-900 mb-6 font-heading tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 font-heading tracking-tight leading-[1.1]">
               Documentation
             </h1>
-            <p className="text-lg lg:text-xl text-charcoal-500 mb-8 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg lg:text-xl text-cream-200/85 mb-8 leading-relaxed max-w-2xl mx-auto">
               Everything you need to know to get the most out of Tably.
             </p>
             
             {/* Search Input */}
             <div className="max-w-md mx-auto relative group">
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal-400 group-focus-within:text-plum-500 transition-colors">
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal-400 group-focus-within:text-navy-500 transition-colors">
                 <Search size={18} />
               </span>
               <input
                 type="text"
                 placeholder="Search documentation..."
-                className="input-premium pl-11 shadow-soft"
+                className="input-premium pl-11! shadow-soft"
               />
             </div>
           </motion.div>
@@ -149,9 +147,9 @@ function DocsContent() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.08 }}
                 >
-                  <Card className="p-8 h-full flex flex-col justify-between border border-cream-300/50 hover:border-plum-200">
+                  <Card className="p-8 h-full flex flex-col justify-between border border-cream-300/50 hover:border-navy-200">
                     <div>
-                      <div className="w-12 h-12 bg-plum-50 text-plum-600 rounded-2xl flex items-center justify-center mb-5 shadow-sm">
+                      <div className="w-12 h-12 bg-navy-50 text-navy-600 rounded-2xl flex items-center justify-center mb-5 shadow-sm">
                         <IconComp size={22} />
                       </div>
                       <h2 className="text-xl font-bold text-charcoal-900 mb-2 font-heading tracking-tight">{section.title}</h2>
@@ -189,7 +187,7 @@ function DocsContent() {
             viewport={{ once: true }}
             className="text-center max-w-2xl mx-auto"
           >
-            <div className="w-12 h-1.5 bg-gradient-gold rounded-full mx-auto mb-4" />
+            <div className="w-12 h-1.5 bg-gradient-orange rounded-full mx-auto mb-4" />
             <h2 className="text-3xl font-extrabold text-charcoal-900 mb-8 font-heading tracking-tight">
               Quick links
             </h2>
@@ -203,7 +201,7 @@ function DocsContent() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="px-5 py-2.5 bg-white rounded-xl text-charcoal-600 font-bold text-sm border border-cream-400 hover:border-plum-200 hover:bg-cream-50 hover:text-plum-600 shadow-soft transition-all duration-300"
+                  className="px-5 py-2.5 bg-white rounded-xl text-charcoal-600 font-bold text-sm border border-cream-400 hover:border-navy-200 hover:bg-cream-50 hover:text-navy-600 shadow-soft transition-all duration-300"
                 >
                   {link.label}
                 </Link>

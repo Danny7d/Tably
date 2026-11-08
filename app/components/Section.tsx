@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 interface SectionProps {
   children: ReactNode;
   className?: string;
-  background?: 'white' | 'gray' | 'primary-light' | 'ivory';
+  background?: 'white' | 'gray' | 'primary-light' | 'ivory' | 'navy';
   id?: string;
 }
 
@@ -13,6 +13,7 @@ const Section = ({ children, className = '', background = 'white', id }: Section
     gray: 'bg-cream-200/60',
     'primary-light': 'bg-navy-50/50',
     ivory: 'bg-cream-100',
+    navy: 'bg-navy-950',
   };
 
   return (

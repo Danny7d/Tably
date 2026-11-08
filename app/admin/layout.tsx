@@ -49,7 +49,7 @@ export default function AdminLayout({
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-plum-50 to-cream-100">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-navy-50 to-cream-100">
         <div className="bg-white p-8 rounded-2xl shadow-elevated max-w-md w-full mx-4">
           <h1 className="text-2xl font-bold text-charcoal-900 mb-6 text-center">Admin Login</h1>
           <form onSubmit={handleLogin} className="space-y-4">
@@ -59,7 +59,7 @@ export default function AdminLayout({
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border border-cream-300 focus:border-plum-500 focus:ring-2 focus:ring-plum-200 outline-none transition-all"
+                className="w-full px-4 py-3 rounded-xl border border-cream-300 focus:border-navy-500 focus:ring-2 focus:ring-navy-200 outline-none transition-all"
                 placeholder="Enter admin password"
                 required
               />
@@ -67,7 +67,7 @@ export default function AdminLayout({
             {error && <p className="text-red-500 text-sm">{error}</p>}
             <button
               type="submit"
-              className="w-full bg-gradient-pop text-charcoal-900 px-6 py-3 rounded-xl font-semibold shadow-glow-gold/30 hover:shadow-glow-gold hover:-translate-y-0.5 transition-all duration-300"
+              className="w-full bg-gradient-pop text-charcoal-900 px-6 py-3 rounded-xl font-semibold shadow-glow-orange/30 hover:shadow-glow-orange hover:-translate-y-0.5 transition-all duration-300"
             >
               Login
             </button>

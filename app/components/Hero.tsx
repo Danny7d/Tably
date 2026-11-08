@@ -108,7 +108,7 @@ const Hero = () => {
           className="relative mt-16 lg:mt-24 grid gap-5 md:grid-cols-3 md:items-end max-w-5xl mx-auto"
         >
           {/* Kitchen display */}
-          <div className={`${glassCard} hidden md:block p-6 md:-rotate-3 md:translate-y-6`}>
+          <div className={`${glassCard} p-6 md:-rotate-3 md:translate-y-6`}>
             <div className="flex items-center justify-between mb-5">
               <span className="text-xs font-semibold uppercase tracking-wider text-cream-300/80">Kitchen display</span>
               <span className="text-xs text-cream-300/70">Live</span>
@@ -130,7 +130,7 @@ const Hero = () => {
           </div>
 
           {/* Revenue: the accent card */}
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-orange p-7 text-charcoal-900 shadow-[0_40px_90px_-20px_rgba(240,114,31,0.55)] ring-1 ring-inset ring-white/30 md:-translate-y-4">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-orange p-7 text-charcoal-900 shadow-[0_40px_90px_-20px_rgba(240,114,31,0.55)] ring-1 ring-inset ring-white/30 max-md:order-first md:-translate-y-4">
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold uppercase tracking-wider text-charcoal-900/80">Today&apos;s revenue</span>
               <span className="rounded-full bg-charcoal-900/90 px-2.5 py-1 text-xs font-semibold text-orange-300">+8%</span>
@@ -150,7 +150,7 @@ const Hero = () => {
           </div>
 
           {/* Table map */}
-          <div className={`${glassCard} hidden md:block p-6 md:rotate-3 md:translate-y-6`}>
+          <div className={`${glassCard} p-6 md:rotate-3 md:translate-y-6`}>
             <div className="flex items-center justify-between mb-5">
               <span className="text-xs font-semibold uppercase tracking-wider text-cream-300/80">Floor</span>
               <span className="text-xs text-cream-300/70">18 of 24 active</span>

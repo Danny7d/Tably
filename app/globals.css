@@ -245,6 +245,14 @@ body {
   background: linear-gradient(135deg, var(--color-navy-600) 0%, var(--color-navy-500) 50%, var(--color-navy-400) 100%);
 }
 
+.bg-hero-glow {
+  background:
+    radial-gradient(70% 40% at 50% 100%, rgba(255,150,50,0.55) 0%, rgba(240,114,31,0.3) 45%, transparent 100%),
+    radial-gradient(110% 70% at 50% 115%, rgba(240,114,31,0.5) 0%, rgba(240,114,31,0.15) 45%, transparent 75%),
+    radial-gradient(60% 45% at 18% 20%, rgba(95,125,176,0.28) 0%, transparent 70%),
+    linear-gradient(180deg, #0D1629 0%, #14213D 60%, #182A4D 100%);
+}
+
 .bg-gradient-orange {
   background: linear-gradient(135deg, var(--color-orange-400) 0%, var(--color-orange-500) 100%);
 }

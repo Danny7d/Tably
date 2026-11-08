@@ -6,12 +6,15 @@ import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+// Pages that open with the dark navy hero
+const darkHeroPaths = ['/', '/about', '/contact', '/demo', '/docs', '/features', '/pricing', '/qr-ordering-addis'];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  // The home hero is dark navy, so the bar needs light text until the page scrolls
-  const onDark = pathname === '/' && !scrolled;
+  // Dark hero pages need light nav text until the page scrolls
+  const onDark = darkHeroPaths.includes(pathname) && !scrolled;
 
   useEffect(() => {
     const handleScroll = () => {

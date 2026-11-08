@@ -21,15 +21,13 @@ const jsonLd = {
 
 export default function About() {
   return (
-    <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+    <div className="min-h-screen selection:bg-navy-100 selection:text-navy-900">
       <JsonLd data={jsonLd} />
       <Navbar />
       
       {/* Hero */}
-      <Section background="ivory" className="relative pt-36 pb-20 overflow-hidden noise-bg border-b border-cream-300/40">
-        <div className="absolute inset-0 bg-gradient-hero opacity-80" />
-        <div className="blob bg-plum-300/30 w-[30rem] h-[30rem] top-10 -right-20 animate-blob" />
-        <div className="blob bg-plum-200/30 w-[24rem] h-[24rem] bottom-10 -left-20 animate-blob" style={{ animationDelay: '2s' }} />
+      <Section background="navy" className="relative pt-36 pb-20 lg:pb-24 overflow-hidden noise-bg rounded-b-[2.5rem] lg:rounded-b-[4rem]">
+        <div className="absolute inset-0 bg-hero-glow" />
 
         <Container className="relative z-10">
           <motion.div
@@ -38,13 +36,13 @@ export default function About() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-center max-w-3xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 bg-plum-50 border border-plum-200/60 text-plum-600 text-sm font-medium px-5 py-2 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/[0.07] border border-white/15 backdrop-blur text-cream-100 text-sm font-medium px-5 py-2 rounded-full mb-6">
               Our Journey
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-charcoal-900 mb-6 font-heading tracking-tight leading-[1.1]">
-              About <span className="text-gradient">Tably</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 font-heading tracking-tight leading-[1.1]">
+              About <span className="bg-gradient-to-r from-orange-400 via-orange-300 to-orange-400 bg-clip-text text-transparent">Tably</span>
             </h1>
-            <p className="text-lg lg:text-xl text-charcoal-500 mb-8 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg lg:text-xl text-cream-200/85 mb-8 leading-relaxed max-w-2xl mx-auto">
               We're on a mission to modernize restaurant operations and help businesses thrive in the digital age.
             </p>
           </motion.div>
@@ -53,7 +51,7 @@ export default function About() {
 
       {/* Mission */}
       <Section background="white" className="relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-plum-50/50 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-navy-50/50 rounded-full blur-[120px] pointer-events-none" />
         
         <Container className="relative z-10">
           <motion.div
@@ -82,14 +80,14 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <div className="w-12 h-1.5 bg-gradient-gold rounded-full mx-auto mb-4" />
+            <div className="w-12 h-1.5 bg-gradient-orange rounded-full mx-auto mb-4" />
             <h2 className="text-3xl sm:text-4xl font-extrabold text-charcoal-900 font-heading tracking-tight">Our Values</h2>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Target, title: 'Simplicity', description: 'Complex problems, simple solutions', bg: 'bg-plum-50', text: 'text-plum-600' },
-              { icon: Eye, title: 'Transparency', description: 'No hidden fees, no surprises', bg: 'bg-gold-50', text: 'text-gold-600' },
+              { icon: Target, title: 'Simplicity', description: 'Complex problems, simple solutions', bg: 'bg-navy-50', text: 'text-navy-600' },
+              { icon: Eye, title: 'Transparency', description: 'No hidden fees, no surprises', bg: 'bg-orange-50', text: 'text-orange-700' },
               { icon: Heart, title: 'Customer First', description: 'Your success is our success', bg: 'bg-rose-50', text: 'text-rose-500' },
               { icon: Users, title: 'Community', description: 'Building together, growing together', bg: 'bg-sage-50', text: 'text-sage-600' },
             ].map((value, index) => {
@@ -130,7 +128,7 @@ export default function About() {
               <h2 className="text-3xl sm:text-4xl font-extrabold text-charcoal-900 font-heading tracking-tight">Our Story</h2>
             </div>
             <div className="prose prose-lg text-charcoal-500 space-y-6 leading-relaxed max-w-none text-[0.9688rem] md:text-base">
-              <p className="first-letter:text-4xl first-letter:font-extrabold first-letter:text-plum-500 first-letter:mr-2 first-letter:float-left">
+              <p className="first-letter:text-4xl first-letter:font-extrabold first-letter:text-navy-500 first-letter:mr-2 first-letter:float-left">
                 Tably was born from a simple observation: restaurant technology was stuck in the past. 
                 While every other industry had embraced modern, cloud-based solutions, restaurants were 
                 still struggling with outdated POS systems, paper orders, and fragmented tools.
@@ -140,7 +138,7 @@ export default function About() {
                 veterans and technology experts who understood the unique challenges of running a restaurant 
                 in the digital age.
               </p>
-              <p className="border-l-4 border-l-gold-400 pl-4 py-1 italic font-medium text-charcoal-700 bg-cream-50/50 rounded-r-xl">
+              <p className="border-l-4 border-l-orange-400 pl-4 py-1 italic font-medium text-charcoal-700 bg-cream-50/50 rounded-r-xl">
                 Today, Tably powers thousands of restaurants worldwide, helping them serve millions of 
                 customers more efficiently. But we're just getting started. Our vision is a world where 
                 every restaurant, regardless of size, has access to enterprise-grade technology that 
@@ -160,7 +158,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16 animate-fade-in"
           >
-            <div className="w-12 h-1.5 bg-gradient-gold rounded-full mx-auto mb-4" />
+            <div className="w-12 h-1.5 bg-gradient-orange rounded-full mx-auto mb-4" />
             <h2 className="text-3xl sm:text-4xl font-extrabold text-charcoal-900 font-heading tracking-tight">Leadership Team</h2>
           </motion.div>
 
@@ -179,11 +177,11 @@ export default function About() {
               >
                 <Card className="p-7 text-center h-full flex flex-col justify-between">
                   <div>
-                    <div className="w-20 h-20 bg-gradient-to-br from-plum-100 to-plum-50 border-2 border-plum-200/50 rounded-full mx-auto mb-5 flex items-center justify-center text-plum-600 text-xl font-extrabold shadow-soft">
+                    <div className="w-20 h-20 bg-gradient-to-br from-navy-100 to-navy-50 border-2 border-navy-200/50 rounded-full mx-auto mb-5 flex items-center justify-center text-navy-600 text-xl font-extrabold shadow-soft">
                       {member.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <h3 className="text-lg font-bold text-charcoal-900 mb-1 font-heading">{member.name}</h3>
-                    <p className="text-plum-600 font-semibold text-sm mb-4">{member.role}</p>
+                    <p className="text-navy-600 font-semibold text-sm mb-4">{member.role}</p>
                   </div>
                   <p className="text-[0.875rem] text-charcoal-500 leading-relaxed border-t border-cream-300/40 pt-4 mt-auto">{member.bio}</p>
                 </Card>
@@ -200,10 +198,10 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center relative overflow-hidden rounded-[2.5rem] bg-gradient-cta p-12 md:p-20 shadow-glow-plum/30"
+            className="text-center relative overflow-hidden rounded-[2.5rem] bg-gradient-cta p-12 md:p-20 shadow-glow-navy/30"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-plum-300),transparent_50%)] opacity-30 pointer-events-none" />
-            <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-plum-400/20 rounded-full blur-[80px] pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-navy-300),transparent_50%)] opacity-30 pointer-events-none" />
+            <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-navy-400/20 rounded-full blur-[80px] pointer-events-none" />
             
             <div className="relative z-10 max-w-3xl mx-auto">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5 font-heading tracking-tight leading-tight">

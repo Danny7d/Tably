@@ -8,12 +8,12 @@ import Container from '../components/Container';
 
 export default function Privacy() {
   return (
-    <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+    <div className="min-h-screen selection:bg-navy-100 selection:text-navy-900">
       <Navbar />
       
       <Section background="ivory" className="relative pt-36 pb-20 overflow-hidden noise-bg border-b border-cream-300/40">
         <div className="absolute inset-0 bg-gradient-hero opacity-85" />
-        <div className="blob bg-plum-300/20 w-[30rem] h-[30rem] top-10 -right-20 animate-blob" />
+        <div className="blob bg-navy-300/20 w-[30rem] h-[30rem] top-10 -right-20 animate-blob" />
 
         <Container className="relative z-10">
           <motion.div
@@ -34,7 +34,7 @@ export default function Privacy() {
             <div className="space-y-10 text-charcoal-500 leading-relaxed text-[0.9688rem] md:text-base">
               <section className="space-y-3">
                 <h2 className="text-xl sm:text-2xl font-bold text-charcoal-900 font-heading">1. Information We Collect</h2>
-                <div className="w-8 h-1 bg-plum-500/60 rounded-full" />
+                <div className="w-8 h-1 bg-navy-500/60 rounded-full" />
                 <p className="pt-2">
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or communicate with us. This includes name, email address, restaurant 
@@ -44,7 +44,7 @@ export default function Privacy() {
 
               <section className="space-y-3">
                 <h2 className="text-xl sm:text-2xl font-bold text-charcoal-900 font-heading">2. How We Use Your Information</h2>
-                <div className="w-8 h-1 bg-plum-500/60 rounded-full" />
+                <div className="w-8 h-1 bg-navy-500/60 rounded-full" />
                 <p className="pt-2">
                   We use the information we collect to provide, maintain, and improve our services, 
                   process transactions, send you technical notices and support messages, and communicate 
@@ -54,7 +54,7 @@ export default function Privacy() {
 
               <section className="space-y-3">
                 <h2 className="text-xl sm:text-2xl font-bold text-charcoal-900 font-heading">3. Information Sharing</h2>
-                <div className="w-8 h-1 bg-plum-500/60 rounded-full" />
+                <div className="w-8 h-1 bg-navy-500/60 rounded-full" />
                 <p className="pt-2">
                   We do not sell your personal information. We may share information with service 
                   providers who perform services on our behalf, when required by law, or with your 
@@ -64,7 +64,7 @@ export default function Privacy() {
 
               <section className="space-y-3">
                 <h2 className="text-xl sm:text-2xl font-bold text-charcoal-900 font-heading">4. Data Security</h2>
-                <div className="w-8 h-1 bg-plum-500/60 rounded-full" />
+                <div className="w-8 h-1 bg-navy-500/60 rounded-full" />
                 <p className="pt-2">
                   We implement appropriate technical and organizational measures to protect your 
                   personal information against unauthorized access, alteration, disclosure, or destruction.
@@ -73,7 +73,7 @@ export default function Privacy() {
 
               <section className="space-y-3">
                 <h2 className="text-xl sm:text-2xl font-bold text-charcoal-900 font-heading">5. Your Rights</h2>
-                <div className="w-8 h-1 bg-plum-500/60 rounded-full" />
+                <div className="w-8 h-1 bg-navy-500/60 rounded-full" />
                 <p className="pt-2">
                   You have the right to access, correct, or delete your personal information. You may 
                   also opt out of certain communications. Contact us to exercise these rights.
@@ -82,10 +82,10 @@ export default function Privacy() {
 
               <section className="space-y-3">
                 <h2 className="text-xl sm:text-2xl font-bold text-charcoal-900 font-heading">6. Contact Us</h2>
-                <div className="w-8 h-1 bg-plum-500/60 rounded-full" />
+                <div className="w-8 h-1 bg-navy-500/60 rounded-full" />
                 <p className="pt-2">
                   If you have questions about this Privacy Policy, please contact us at{' '}
-                  <a href="mailto:privacy@tably.site" className="text-plum-600 font-semibold hover:underline">
+                  <a href="mailto:privacy@tably.site" className="text-navy-600 font-semibold hover:underline">
                     privacy@tably.site
                   </a>
                 </p>

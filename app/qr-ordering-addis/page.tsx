@@ -50,32 +50,37 @@ const jsonLd = {
 
 export default function QrOrderingAddisPage() {
   return (
-    <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+    <div className="min-h-screen selection:bg-navy-100 selection:text-navy-900">
       <JsonLd data={jsonLd} />
       <Navbar />
 
-      <Section background="white" className="pt-32 pb-16 lg:pt-40">
-        <Container className="max-w-3xl">
-          <p className="text-sm font-medium text-plum-600 mb-4">
+      <Section background="navy" className="relative pt-32 pb-16 lg:pt-44 lg:pb-24 overflow-hidden noise-bg rounded-b-[2.5rem] lg:rounded-b-[4rem]">
+        <div className="absolute inset-0 bg-hero-glow" />
+        <Container className="relative z-10 max-w-3xl">
+          <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.07] backdrop-blur px-4 py-1.5 text-sm font-medium text-cream-100 mb-6">
             For restaurants in Addis Ababa & Ethiopia
           </p>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal-900 mb-6 font-heading tracking-tight leading-tight">
-            QR table ordering that fits a busy Addis floor
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 font-heading tracking-tight leading-tight">
+            QR table ordering that fits a <span className="bg-gradient-to-r from-orange-400 via-orange-300 to-orange-400 bg-clip-text text-transparent">busy Addis floor</span>
           </h1>
-          <p className="text-lg text-charcoal-500 mb-8 leading-relaxed">
+          <p className="text-lg text-cream-200/85 mb-8 leading-relaxed">
             Guests scan a code at the table, place the order themselves, and the kitchen gets a
             clear ticket in sequence. Waiters can still take orders in the same system when someone
             does not want to scan. No guest app to download.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mb-14">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Button variant="primary" size="lg" href="/contact?subject=Book%20a%20demo">
               Book a demo
             </Button>
-            <Button variant="secondary" size="lg" href="/pricing">
+            <Button variant="secondary" size="lg" href="/pricing" className="bg-transparent text-white border border-white/40 hover:bg-white/10">
               See pricing
             </Button>
           </div>
+        </Container>
+      </Section>
 
+      <Section background="white" className="py-14 lg:py-20">
+        <Container className="max-w-3xl">
           <div className="space-y-10 text-charcoal-600 leading-relaxed">
             <section>
               <h2 className="text-xl font-bold text-charcoal-900 mb-3">
@@ -120,7 +125,7 @@ export default function QrOrderingAddisPage() {
                 Telegram:{' '}
                 <a
                   href="https://t.me/TablyContact"
-                  className="text-plum-600 hover:underline"
+                  className="text-navy-600 hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -128,11 +133,11 @@ export default function QrOrderingAddisPage() {
                 </a>
                 {' · '}
                 Phone:{' '}
-                <a href="tel:+251937505084" className="text-plum-600 hover:underline">
+                <a href="tel:+251937505084" className="text-navy-600 hover:underline">
                   +251 93 750 5084
                 </a>
                 {' · '}
-                <Link href="/contact" className="text-plum-600 hover:underline">
+                <Link href="/contact" className="text-navy-600 hover:underline">
                   Contact form
                 </Link>
               </p>
