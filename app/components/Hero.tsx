@@ -9,9 +9,9 @@ const Hero = () => {
     <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden noise-bg">
       <div className="absolute inset-0 bg-gradient-hero" />
 
-      <div className="blob bg-plum-400 w-[28rem] h-[28rem] top-16 -right-48 animate-blob" />
-      <div className="blob bg-plum-300 w-[22rem] h-[22rem] bottom-20 -left-40 animate-blob" style={{ animationDelay: '3s' }} />
-      <div className="blob bg-plum-200 w-[18rem] h-[18rem] top-1/2 left-1/3 animate-blob" style={{ animationDelay: '6s' }} />
+      <div className="blob bg-navy-400 w-[28rem] h-[28rem] top-16 -right-48 animate-blob" />
+      <div className="blob bg-navy-300 w-[22rem] h-[22rem] bottom-20 -left-40 animate-blob" style={{ animationDelay: '3s' }} />
+      <div className="blob bg-navy-200 w-[18rem] h-[18rem] top-1/2 left-1/3 animate-blob" style={{ animationDelay: '6s' }} />
 
       <Container className="relative">
         <motion.div
@@ -24,9 +24,9 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.05 }}
-            className="inline-flex items-center gap-2 bg-plum-50 border border-plum-200/60 text-plum-600 text-sm font-medium px-5 py-2 rounded-full mb-8"
+            className="inline-flex items-center gap-2 bg-navy-50 border border-navy-200/60 text-navy-600 text-sm font-medium px-5 py-2 rounded-full mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-gold-400 shrink-0" />
+            <span className="w-2 h-2 rounded-full bg-orange-400 shrink-0" />
             Built for restaurants in Addis Ababa & Ethiopia
           </motion.div>
 
@@ -81,12 +81,12 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="mt-20 lg:mt-24 relative animate-float"
         >
-          <div className="absolute inset-x-10 -inset-y-6 bg-plum-400/10 rounded-[2rem] blur-3xl" />
+          <div className="absolute inset-x-10 -inset-y-6 bg-navy-400/10 rounded-[2rem] blur-3xl" />
 
           <div className="relative glass rounded-3xl shadow-elevated border border-cream-300/50 overflow-hidden">
             <div className="bg-cream-100 border-b border-cream-300/60 px-5 py-3.5 flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-rose-400/80" />
-              <div className="w-3 h-3 rounded-full bg-gold-400/80" />
+              <div className="w-3 h-3 rounded-full bg-orange-400/80" />
               <div className="w-3 h-3 rounded-full bg-sage-400/80" />
               <div className="ml-4 flex-1 max-w-xs">
                 <div className="h-5 bg-cream-200 rounded-lg" />
@@ -103,7 +103,7 @@ const Hero = () => {
                     +12% from yesterday
                   </div>
                 </div>
-                <div className="bg-white p-4 lg:p-5 rounded-2xl shadow-soft border border-gold-300/60 border-l-4 border-l-gold-400">
+                <div className="bg-white p-4 lg:p-5 rounded-2xl shadow-soft border border-orange-300/60 border-l-4 border-l-orange-400">
                   <div className="text-xs font-medium text-charcoal-400 mb-1.5">Revenue</div>
                   <div className="text-2xl font-bold text-charcoal-900">429,420 ETB</div>
                   <div className="text-xs font-medium text-sage-600 mt-1.5 flex items-center gap-1">
@@ -123,8 +123,8 @@ const Hero = () => {
                   {[1, 2, 3].map((i) => (
                     <div key={i} className="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-cream-100/60 transition-colors border-b border-cream-200/40 last:border-0">
                       <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 bg-plum-100 rounded-xl flex items-center justify-center">
-                          <span className="text-xs font-bold text-plum-600">T{i}</span>
+                        <div className="w-9 h-9 bg-navy-100 rounded-xl flex items-center justify-center">
+                          <span className="text-xs font-bold text-navy-600">T{i}</span>
                         </div>
                         <div>
                           <div className="text-sm font-semibold text-charcoal-900">Table {i}</div>
