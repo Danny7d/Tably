@@ -20,7 +20,7 @@ export default function HomeHowItWorks({ howItWorks }: HomeHowItWorksProps) {
       viewport={{ once: true }}
       className="text-center mb-16 max-w-3xl mx-auto"
     >
-      <div className="w-12 h-1.5 bg-gradient-gold rounded-full mx-auto mb-4" />
+      <div className="w-12 h-1.5 bg-gradient-orange rounded-full mx-auto mb-4" />
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal-900 mb-4 font-heading tracking-tight">
         How it works
       </h2>
@@ -28,7 +28,7 @@ export default function HomeHowItWorks({ howItWorks }: HomeHowItWorksProps) {
         Get started in minutes, not days
       </p>
       <div className="relative max-w-2xl mx-auto mt-12">
-        <div className="absolute left-[21px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-plum-300 via-plum-200 to-cream-300" />
+        <div className="absolute left-[21px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-navy-300 via-navy-200 to-cream-300" />
         <div className="space-y-8 relative">
           {howItWorks.map((item, index) => (
             <motion.div
@@ -39,11 +39,11 @@ export default function HomeHowItWorks({ howItWorks }: HomeHowItWorksProps) {
               transition={{ delay: index * 0.08 }}
               className="flex items-start group"
             >
-              <div className="shrink-0 w-11 h-11 bg-cream-50 border-2 border-plum-500 rounded-full flex items-center justify-center text-plum-600 font-extrabold text-sm z-10 shadow-soft group-hover:bg-plum-500 group-hover:text-white transition-all duration-300">
+              <div className="shrink-0 w-11 h-11 bg-cream-50 border-2 border-navy-500 rounded-full flex items-center justify-center text-navy-600 font-extrabold text-sm z-10 shadow-soft group-hover:bg-navy-500 group-hover:text-white transition-all duration-300">
                 {item.step}
               </div>
               <div className="flex-1 ml-5 pt-1.5">
-                <h3 className="text-lg font-bold text-charcoal-900 mb-1 group-hover:text-plum-600 transition-colors duration-300 font-heading">
+                <h3 className="text-lg font-bold text-charcoal-900 mb-1 group-hover:text-navy-600 transition-colors duration-300 font-heading">
                   {item.title}
                 </h3>
                 <p className="text-charcoal-500 leading-relaxed text-[0.9375rem]">{item.description}</p>

@@ -24,7 +24,7 @@ export default function HomeTestimonials({ testimonials }: HomeTestimonialsProps
       viewport={{ once: true }}
       className="text-center mb-16 max-w-3xl mx-auto"
     >
-      <div className="w-12 h-1.5 bg-gradient-gold rounded-full mx-auto mb-4" />
+      <div className="w-12 h-1.5 bg-gradient-orange rounded-full mx-auto mb-4" />
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal-900 mb-4 font-heading tracking-tight">
         Built for real restaurant floors
       </h2>
@@ -45,13 +45,13 @@ export default function HomeTestimonials({ testimonials }: HomeTestimonialsProps
               <div className="relative z-10">
                 <div className="flex gap-1.5 mb-5">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="text-gold-500 fill-gold-500" size={16} />
+                    <Star key={i} className="text-orange-500 fill-orange-500" size={16} />
                   ))}
                 </div>
                 <p className="text-charcoal-500 leading-relaxed italic mb-6 text-[0.9375rem]">"{testimonial.content}"</p>
               </div>
               <div className="flex items-center mt-auto pt-4 border-t border-cream-300/40 relative z-10">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-plum-600 to-plum-500 flex items-center justify-center text-white font-extrabold text-sm mr-3 shadow-soft">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-navy-600 to-navy-500 flex items-center justify-center text-white font-extrabold text-sm mr-3 shadow-soft">
                   {testimonial.name[0]}
                 </div>
                 <div>
