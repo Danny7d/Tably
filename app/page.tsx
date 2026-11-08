@@ -80,35 +80,35 @@ const jsonLd = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+    <div className="min-h-screen selection:bg-navy-100 selection:text-navy-900">
       <JsonLd data={jsonLd} />
       <Navbar />
 
       <Hero />
 
       <Section background="white" className="relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-plum-100/30 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-navy-100/30 rounded-full blur-[120px] pointer-events-none" />
         <Container className="relative z-10">
           <HomeFeatures features={features} />
         </Container>
       </Section>
 
       <Section background="ivory" className="relative overflow-hidden">
-        <div className="blob bg-plum-200/40 w-80 h-80 top-1/4 -right-20 animate-blob" style={{ animationDelay: '1s' }} />
+        <div className="blob bg-navy-200/40 w-80 h-80 top-1/4 -right-20 animate-blob" style={{ animationDelay: '1s' }} />
         <Container className="relative z-10">
           <HomeHowItWorks howItWorks={howItWorks} />
         </Container>
       </Section>
 
       <Section background="white" className="relative overflow-hidden">
-        <div className="blob bg-plum-100/40 w-96 h-96 -bottom-20 -left-20 animate-blob" style={{ animationDelay: '4s' }} />
+        <div className="blob bg-navy-100/40 w-96 h-96 -bottom-20 -left-20 animate-blob" style={{ animationDelay: '4s' }} />
         <Container className="relative z-10">
           <HomePricing plans={plans} />
         </Container>
       </Section>
 
       <Section background="ivory" className="relative overflow-hidden">
-        <div className="blob bg-plum-100/30 w-80 h-80 top-10 left-10 animate-blob" />
+        <div className="blob bg-navy-100/30 w-80 h-80 top-10 left-10 animate-blob" />
         <Container className="relative z-10">
           <HomeTestimonials testimonials={testimonials} />
         </Container>
