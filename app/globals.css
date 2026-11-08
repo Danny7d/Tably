@@ -119,10 +119,14 @@ body {
   font-family: var(--font-sans);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  color: var(--color-charcoal-900);
-  letter-spacing: -0.02em;
+/* In @layer base so Tailwind color utilities (text-white on dark panels, etc.) can override it.
+   Unlayered, this rule beat every text-* class on headings. */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-charcoal-900);
+    letter-spacing: -0.02em;
+  }
 }
 
 /* ── Scrollbar ── */

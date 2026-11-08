@@ -26,17 +26,17 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-plum-950 text-white overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-plum-500/50 to-transparent" />
+    <footer className="relative bg-navy-950 text-white overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-navy-500/50 to-transparent" />
 
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-[20rem] bg-plum-600/8 rounded-full blur-[100px]" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-[20rem] bg-navy-600/8 rounded-full blur-[100px]" />
 
       <div className="container-custom py-16 lg:py-20 relative">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12 mb-14">
           <div className="col-span-2 lg:col-span-1">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold text-gradient-plum mb-4 inline-block"
+              className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text text-transparent mb-4 inline-block"
             >
               Tably
             </motion.div>

@@ -10,6 +10,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  // The home hero is dark navy, so the bar needs light text until the page scrolls
+  const onDark = pathname === '/' && !scrolled;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +46,7 @@ const Navbar = () => {
           <Link href="/" className="flex items-center space-x-2" aria-label="Tably Home">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="flex items-center"
+              className={`flex items-center transition-all duration-300 ${onDark ? 'rounded-xl bg-cream-100 px-3 py-1.5 shadow-lg shadow-black/20' : ''}`}
             >
               <img src="/tably-horizontal-icon.jpg" alt="Tably" className="h-8 w-auto" />
             </motion.div>
@@ -58,8 +60,8 @@ const Navbar = () => {
                 href={item.href}
                 className={`relative px-4 py-2 text-sm font-medium rounded-xl transition-all duration-200 ${
                   pathname === item.href
-                    ? 'text-navy-600 bg-navy-50'
-                    : 'text-charcoal-500 hover:text-charcoal-900 hover:bg-cream-200/60'
+                    ? onDark ? 'text-white bg-white/10' : 'text-navy-600 bg-navy-50'
+                    : onDark ? 'text-cream-200/85 hover:text-white hover:bg-white/10' : 'text-charcoal-500 hover:text-charcoal-900 hover:bg-cream-200/60'
                 }`}
               >
                 {item.name}
@@ -80,7 +82,7 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-xl hover:bg-cream-100 transition-colors"
+            className={`lg:hidden p-2 rounded-xl transition-colors ${onDark ? 'text-white hover:bg-white/10' : 'hover:bg-cream-100'}`}
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isOpen}
           >

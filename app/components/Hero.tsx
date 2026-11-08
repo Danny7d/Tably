@@ -1,51 +1,73 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Button from './Button';
 import Container from './Container';
 
+const ease = [0.16, 1, 0.3, 1] as const;
+
+const tickets = [
+  { table: 'Table 4', items: '2 items', time: '02:14', status: 'New', dot: 'bg-orange-500' },
+  { table: 'Table 11', items: '5 items', time: '06:40', status: 'Preparing', dot: 'bg-orange-400' },
+  { table: 'Table 2', items: '3 items', time: '11:05', status: 'Ready', dot: 'bg-sage-400' },
+];
+
+const glassCard =
+  'rounded-3xl border border-white/10 bg-white/[0.06] backdrop-blur-xl shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]';
+
 const Hero = () => {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden noise-bg">
-      <div className="absolute inset-0 bg-gradient-hero" />
-
-      <div className="blob bg-navy-400 w-[28rem] h-[28rem] top-16 -right-48 animate-blob" />
-      <div className="blob bg-navy-300 w-[22rem] h-[22rem] bottom-20 -left-40 animate-blob" style={{ animationDelay: '3s' }} />
-      <div className="blob bg-navy-200 w-[18rem] h-[18rem] top-1/2 left-1/3 animate-blob" style={{ animationDelay: '6s' }} />
+    <section className="relative overflow-hidden rounded-b-[2.5rem] bg-navy-950 pt-32 pb-24 lg:rounded-b-[4rem] lg:pt-44 lg:pb-32 noise-bg">
+      {/* Atmosphere: navy base, a big orange glow rising from below, a softer amber one behind the headline */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(70% 38% at 50% 100%, rgba(255,150,50,0.85) 0%, rgba(240,114,31,0.5) 45%, transparent 100%), ' +
+            'radial-gradient(130% 75% at 50% 112%, rgba(240,114,31,0.7) 0%, rgba(240,114,31,0.22) 42%, transparent 72%), ' +
+            'radial-gradient(60% 45% at 18% 22%, rgba(95,125,176,0.28) 0%, transparent 70%), ' +
+            'radial-gradient(45% 35% at 82% 12%, rgba(242,154,23,0.16) 0%, transparent 70%), ' +
+            'linear-gradient(180deg, #0D1629 0%, #14213D 55%, #182A4D 100%)',
+        }}
+      />
 
       <Container className="relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.7, ease }}
           className="text-center max-w-4xl mx-auto"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.05 }}
-            className="inline-flex items-center gap-2 bg-navy-50 border border-navy-200/60 text-navy-600 text-sm font-medium px-5 py-2 rounded-full mb-8"
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.07] backdrop-blur px-5 py-2 text-sm font-medium text-cream-100 mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-orange-400 shrink-0" />
+            <span className="h-2 w-2 rounded-full bg-orange-500 shadow-[0_0_10px_2px_rgba(240,114,31,0.7)]" />
             Built for restaurants in Addis Ababa & Ethiopia
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-[2.75rem] sm:text-5xl lg:text-7xl font-extrabold text-charcoal-900 mb-7 leading-[1.08] font-heading tracking-tight"
+            transition={{ duration: 0.7, delay: 0.1, ease }}
+            style={{ color: '#ffffff' }}
+            className="text-[2.75rem] sm:text-6xl lg:text-7xl font-extrabold mb-7 leading-[1.06] font-heading tracking-tight"
           >
             Run your restaurant.
             <br />
-            <span className="text-gradient">Not your paperwork.</span>
+            <span className="bg-gradient-to-r from-orange-400 via-orange-300 to-orange-400 bg-clip-text text-transparent">
+              Not your paperwork.
+            </span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lg lg:text-xl text-charcoal-500 mb-4 max-w-2xl mx-auto leading-relaxed"
+            transition={{ duration: 0.7, delay: 0.2, ease }}
+            className="text-lg lg:text-xl text-cream-200/85 mb-4 max-w-2xl mx-auto leading-relaxed"
           >
             QR table ordering, kitchen display, and staff tools for independent restaurants
             and multi-location groups in Ethiopia — all in one place. No guest app required.
@@ -54,8 +76,8 @@ const Hero = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="text-sm text-charcoal-500 mb-11 max-w-xl mx-auto"
+            transition={{ duration: 0.7, delay: 0.25, ease }}
+            className="text-sm text-cream-300/80 mb-11 max-w-xl mx-auto"
           >
             For busy floors that need faster tickets — and operators who need one dashboard across branches.
           </motion.p>
@@ -63,79 +85,91 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            transition={{ duration: 0.7, delay: 0.3, ease }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Button variant="primary" size="lg" href="/contact?subject=Book%20a%20demo">
               Book a demo
             </Button>
-            <Button variant="secondary" size="lg" href="/demo">
+            <Link
+              href="/demo"
+              className="inline-flex items-center justify-center rounded-2xl border border-white/25 bg-white/[0.06] px-9 py-4 text-base font-semibold text-white backdrop-blur transition-colors duration-300 hover:bg-white/15 max-sm:w-full"
+            >
               See how it works
-            </Button>
+            </Link>
           </motion.div>
         </motion.div>
 
+        {/* Product cards: kitchen tickets, revenue, table map */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-20 lg:mt-24 relative animate-float"
+          transition={{ duration: 1, delay: 0.5, ease }}
+          className="relative mt-16 lg:mt-24 grid gap-5 md:grid-cols-3 md:items-end max-w-5xl mx-auto"
         >
-          <div className="absolute inset-x-10 -inset-y-6 bg-navy-400/10 rounded-[2rem] blur-3xl" />
-
-          <div className="relative glass rounded-3xl shadow-elevated border border-cream-300/50 overflow-hidden">
-            <div className="bg-cream-100 border-b border-cream-300/60 px-5 py-3.5 flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-rose-400/80" />
-              <div className="w-3 h-3 rounded-full bg-orange-400/80" />
-              <div className="w-3 h-3 rounded-full bg-sage-400/80" />
-              <div className="ml-4 flex-1 max-w-xs">
-                <div className="h-5 bg-cream-200 rounded-lg" />
-              </div>
+          {/* Kitchen display */}
+          <div className={`${glassCard} hidden md:block p-6 md:-rotate-3 md:translate-y-6`}>
+            <div className="flex items-center justify-between mb-5">
+              <span className="text-xs font-semibold uppercase tracking-wider text-cream-300/80">Kitchen display</span>
+              <span className="text-xs text-cream-300/70">Live</span>
             </div>
+            <div className="space-y-3">
+              {tickets.map((t) => (
+                <div key={t.table} className="flex items-center justify-between rounded-2xl bg-white/[0.07] px-4 py-3">
+                  <div>
+                    <div className="text-sm font-semibold text-white">{t.table}</div>
+                    <div className="text-xs text-cream-300/75">{t.items} · {t.time}</div>
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-1 text-xs font-medium text-cream-100">
+                    <span className={`h-1.5 w-1.5 rounded-full ${t.dot}`} />
+                    {t.status}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
 
-            <div className="p-5 lg:p-7 bg-gradient-to-br from-white to-cream-100">
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="bg-white p-4 lg:p-5 rounded-2xl shadow-soft border border-cream-300/40">
-                  <div className="text-xs font-medium text-charcoal-400 mb-1.5">Today&apos;s Orders</div>
-                  <div className="text-2xl font-bold text-charcoal-900">247</div>
-                  <div className="text-xs font-medium text-sage-600 mt-1.5 flex items-center gap-1">
-                    <span className="inline-block w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[5px] border-b-sage-500" />
-                    +12% from yesterday
-                  </div>
-                </div>
-                <div className="bg-white p-4 lg:p-5 rounded-2xl shadow-soft border border-orange-300/60 border-l-4 border-l-orange-400">
-                  <div className="text-xs font-medium text-charcoal-400 mb-1.5">Revenue</div>
-                  <div className="text-2xl font-bold text-charcoal-900">429,420 ETB</div>
-                  <div className="text-xs font-medium text-sage-600 mt-1.5 flex items-center gap-1">
-                    <span className="inline-block w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[5px] border-b-sage-500" />
-                    +8% from yesterday
-                  </div>
-                </div>
-                <div className="bg-white p-4 lg:p-5 rounded-2xl shadow-soft border border-cream-300/40">
-                  <div className="text-xs font-medium text-charcoal-400 mb-1.5">Active Tables</div>
-                  <div className="text-2xl font-bold text-charcoal-900">18</div>
-                  <div className="text-xs font-medium text-charcoal-400 mt-1.5">of 24 total</div>
-                </div>
-              </div>
-              <div className="bg-white p-4 lg:p-5 rounded-2xl shadow-soft border border-cream-300/40">
-                <div className="text-xs font-medium text-charcoal-400 mb-4">Recent Orders</div>
-                <div className="space-y-1">
-                  {[1, 2, 3].map((i) => (
-                    <div key={i} className="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-cream-100/60 transition-colors border-b border-cream-200/40 last:border-0">
-                      <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 bg-navy-100 rounded-xl flex items-center justify-center">
-                          <span className="text-xs font-bold text-navy-600">T{i}</span>
-                        </div>
-                        <div>
-                          <div className="text-sm font-semibold text-charcoal-900">Table {i}</div>
-                          <div className="text-xs text-charcoal-400">Order #{1000 + i}</div>
-                        </div>
-                      </div>
-                      <div className="text-sm font-semibold text-charcoal-900">{(i * 815).toLocaleString()} ETB</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+          {/* Revenue: the accent card */}
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-orange p-7 text-charcoal-900 shadow-[0_40px_90px_-20px_rgba(240,114,31,0.55)] ring-1 ring-inset ring-white/30 md:-translate-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-bold uppercase tracking-wider text-charcoal-900/80">Today&apos;s revenue</span>
+              <span className="rounded-full bg-charcoal-900/90 px-2.5 py-1 text-xs font-semibold text-orange-300">+8%</span>
+            </div>
+            <div className="mt-4 text-4xl lg:text-5xl font-extrabold tracking-tight font-heading">429,420</div>
+            <div className="text-sm font-semibold text-charcoal-900/80">ETB · 247 orders</div>
+            <svg viewBox="0 0 200 64" preserveAspectRatio="none" className="mt-5 h-16 w-full" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="rev-fill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#222B35" stopOpacity="0.28" />
+                  <stop offset="100%" stopColor="#222B35" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <path d="M0 50 L25 42 L50 46 L75 30 L100 35 L125 20 L150 25 L175 9 L200 14 L200 64 L0 64 Z" fill="url(#rev-fill)" />
+              <path d="M0 50 L25 42 L50 46 L75 30 L100 35 L125 20 L150 25 L175 9 L200 14" stroke="#222B35" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" vectorEffect="non-scaling-stroke" />
+            </svg>
+          </div>
+
+          {/* Table map */}
+          <div className={`${glassCard} hidden md:block p-6 md:rotate-3 md:translate-y-6`}>
+            <div className="flex items-center justify-between mb-5">
+              <span className="text-xs font-semibold uppercase tracking-wider text-cream-300/80">Floor</span>
+              <span className="text-xs text-cream-300/70">18 of 24 active</span>
+            </div>
+            <div className="grid grid-cols-6 gap-2.5">
+              {Array.from({ length: 24 }).map((_, i) => (
+                <div
+                  key={i}
+                  className={`aspect-square rounded-xl ${
+                    i < 18
+                      ? 'bg-orange-500/90 shadow-[0_0_14px_rgba(240,114,31,0.45)]'
+                      : 'bg-white/10 border border-white/10'
+                  }`}
+                />
+              ))}
+            </div>
+            <div className="mt-5 flex items-center gap-4 text-xs text-cream-300/80">
+              <span className="inline-flex items-center gap-1.5"><span className="h-2 w-2 rounded-sm bg-orange-500" />Occupied</span>
+              <span className="inline-flex items-center gap-1.5"><span className="h-2 w-2 rounded-sm bg-white/25" />Free</span>
             </div>
           </div>
         </motion.div>
