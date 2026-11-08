@@ -37,9 +37,9 @@ export default function HomeFAQ({ faqs }: HomeFAQProps) {
             viewport={{ once: true }}
             transition={{ delay: index * 0.05 }}
           >
-            <Card className="p-7 border-l-4 border-l-plum-500 shadow-soft">
+            <Card className="p-7 border-l-4 border-l-navy-500 shadow-soft">
               <div className="flex gap-3 items-start">
-                <HelpCircle className="text-plum-500 shrink-0 mt-0.5" size={20} />
+                <HelpCircle className="text-navy-500 shrink-0 mt-0.5" size={20} />
                 <div>
                   <h3 className="text-lg font-bold text-charcoal-900 mb-2 font-heading">{faq.question}</h3>
                   <p className="text-charcoal-500 leading-relaxed text-[0.9375rem]">{faq.answer}</p>

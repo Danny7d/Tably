@@ -10,13 +10,12 @@ import { Home, ArrowLeft } from 'lucide-react';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen selection:bg-plum-100 selection:text-plum-900">
+    <div className="min-h-screen selection:bg-navy-100 selection:text-navy-900">
       <Navbar />
       
       <Section background="white" className="pt-40 pb-28 relative overflow-hidden">
-        {/* Background decorative elements */}
         <div className="absolute inset-0 bg-gradient-hero opacity-40 pointer-events-none" />
-        <div className="blob bg-plum-100/60 w-[30rem] h-[30rem] top-1/4 left-1/2 -translate-x-1/2 blur-[100px]" />
+        <div className="blob bg-navy-100/60 w-[30rem] h-[30rem] top-1/4 left-1/2 -translate-x-1/2 blur-[100px]" />
 
         <Container className="relative z-10">
           <motion.div
@@ -25,8 +24,7 @@ export default function NotFound() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-center max-w-2xl mx-auto"
           >
-            {/* 404 Gradient Number */}
-            <h1 className="text-9xl font-extrabold text-gradient-plum tracking-tighter mb-4 drop-shadow-sm select-none">
+            <h1 className="text-9xl font-extrabold text-gradient-navy tracking-tighter mb-4 drop-shadow-sm select-none">
               404
             </h1>
             
@@ -45,7 +43,7 @@ export default function NotFound() {
               </Button>
               <button
                 onClick={() => window.history.back()}
-                className="px-8 py-4.5 rounded-2xl border-2 border-plum-200 text-plum-600 font-bold text-base hover:bg-plum-50 hover:border-plum-400 active:scale-95 transition-all duration-300 inline-flex items-center justify-center gap-2 cursor-pointer"
+                className="px-8 py-4.5 rounded-2xl border-2 border-navy-200 text-navy-600 font-bold text-base hover:bg-navy-50 hover:border-navy-400 active:scale-95 transition-all duration-300 inline-flex items-center justify-center gap-2 cursor-pointer"
               >
                 <ArrowLeft size={18} />
                 <span>Go Back</span>
