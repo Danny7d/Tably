@@ -1,17 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Warm Dusk Palette ──
+  /* ── Tably palette (taken from the logo) ──
      Color roles (2 bases + 1 pop):
        base 1   cream      → page backgrounds
-       base 2   plum       → brand: accents, links, active nav, focus, CTA panels
-       text     charcoal   → body text and structure (neutral, not a brand color)
-       pop      gold       → attention: primary buttons, badges, accent bars,
-                             recommended/popular treatment, key highlights
-                             Always charcoal text on gold (never white on gold)
+       base 2   navy       → dark panels, links, active nav
+       text     charcoal   → body text (slate, same as the logo wordmark)
+       pop      orange     → buttons/CTAs, plus soft glows, badges, highlights
        semantic sage = success, rose = error/destructive
-     Gold stays off big surfaces and body text. White text goes on plum,
-     charcoal text goes on gold. */
+     Orange is ~10% of any screen. White text goes on navy; dark text goes on
+     orange (white on orange fails contrast). */
   --color-cream-50: #FEFDFB;
   --color-cream-100: #FAF8F5;
   --color-cream-200: #F5F1EC;
@@ -19,28 +17,28 @@
   --color-cream-400: #E2DBD0;
   --color-cream-500: #D4CBBF;
 
-  --color-plum-50: #F8F5FF;
-  --color-plum-100: #EDE5FF;
-  --color-plum-200: #D9CCFF;
-  --color-plum-300: #BBA6F7;
-  --color-plum-400: #9F7AEA;
-  --color-plum-500: #6C3CE1;
-  --color-plum-600: #5A2DC7;
-  --color-plum-700: #4822A0;
-  --color-plum-800: #361A78;
-  --color-plum-900: #1A0D3E;
-  --color-plum-950: #12101A;
+  --color-navy-50: #F2F5FA;
+  --color-navy-100: #E1E8F3;
+  --color-navy-200: #C3D0E6;
+  --color-navy-300: #93A9CE;
+  --color-navy-400: #5F7DB0;
+  --color-navy-500: #3A5A91;
+  --color-navy-600: #2A4577;
+  --color-navy-700: #1F3560;
+  --color-navy-800: #182A4D;
+  --color-navy-900: #14213D;
+  --color-navy-950: #0D1629;
 
-  --color-gold-50: #FFFBF0;
-  --color-gold-100: #FFF3D6;
-  --color-gold-200: #FFE6A8;
-  --color-gold-300: #FFD470;
-  --color-gold-400: #F5BC3B;
-  --color-gold-500: #E8A838;
-  --color-gold-600: #C98B1E;
-  --color-gold-700: #A06D14;
-  --color-gold-800: #7A520F;
-  --color-gold-900: #553A0B;
+  --color-orange-50: #FFF7EC;
+  --color-orange-100: #FFEBD3;
+  --color-orange-200: #FFD5A6;
+  --color-orange-300: #FFB972;
+  --color-orange-400: #F29A17;
+  --color-orange-500: #F0721F;
+  --color-orange-600: #D45A0E;
+  --color-orange-700: #A8450B;
+  --color-orange-800: #7C3309;
+  --color-orange-900: #552308;
 
   --color-sage-50: #F0FDF4;
   --color-sage-100: #DCFCE7;
@@ -50,16 +48,17 @@
   --color-sage-500: #22C55E;
   --color-sage-600: #16A34A;
 
-  --color-charcoal-50: #F5F4F7;
-  --color-charcoal-100: #E8E6EC;
-  --color-charcoal-200: #CFCBD7;
-  --color-charcoal-300: #A9A3B5;
-  --color-charcoal-400: #847C92;
-  --color-charcoal-500: #5E5873;
-  --color-charcoal-600: #46415A;
-  --color-charcoal-700: #332F45;
-  --color-charcoal-800: #242132;
-  --color-charcoal-900: #1A1625;
+  /* Slate aligned to logo wordmark #222B35 */
+  --color-charcoal-50: #F5F6F7;
+  --color-charcoal-100: #E8EAED;
+  --color-charcoal-200: #D0D4DA;
+  --color-charcoal-300: #A8AFB8;
+  --color-charcoal-400: #6B7380;
+  --color-charcoal-500: #4A5260;
+  --color-charcoal-600: #363D4A;
+  --color-charcoal-700: #2A303B;
+  --color-charcoal-800: #222B35;
+  --color-charcoal-900: #1A222B;
 
   --color-rose-400: #FB7185;
   --color-rose-500: #F43F5E;
@@ -69,11 +68,11 @@
   --font-heading: var(--font-manrope), var(--font-sora), sans-serif;
 
   /* ── Shadows (warm-tinted) ── */
-  --shadow-soft: 0 1px 3px rgba(26, 22, 37, 0.04), 0 1px 2px rgba(26, 22, 37, 0.03);
-  --shadow-card: 0 4px 16px rgba(26, 22, 37, 0.06), 0 1px 4px rgba(26, 22, 37, 0.04);
-  --shadow-elevated: 0 12px 40px rgba(26, 22, 37, 0.1), 0 4px 12px rgba(26, 22, 37, 0.06);
-  --shadow-glow-plum: 0 8px 32px rgba(108, 60, 225, 0.2), 0 2px 8px rgba(108, 60, 225, 0.1);
-  --shadow-glow-gold: 0 8px 32px rgba(232, 168, 56, 0.2), 0 2px 8px rgba(232, 168, 56, 0.1);
+  --shadow-soft: 0 1px 3px rgba(26, 34, 43, 0.04), 0 1px 2px rgba(26, 34, 43, 0.03);
+  --shadow-card: 0 4px 16px rgba(26, 34, 43, 0.06), 0 1px 4px rgba(26, 34, 43, 0.04);
+  --shadow-elevated: 0 12px 40px rgba(26, 34, 43, 0.1), 0 4px 12px rgba(26, 34, 43, 0.06);
+  --shadow-glow-navy: 0 8px 32px rgba(58, 90, 145, 0.2), 0 2px 8px rgba(58, 90, 145, 0.1);
+  --shadow-glow-orange: 0 8px 32px rgba(240, 114, 31, 0.25), 0 2px 8px rgba(240, 114, 31, 0.12);
 
   /* ── Animations ── */
   --animate-fade-up: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -143,13 +142,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Selection ── */
 ::selection {
-  background: rgba(108, 60, 225, 0.15);
-  color: var(--color-plum-900);
+  background: rgba(58, 90, 145, 0.15);
+  color: var(--color-navy-900);
 }
 
-/* ── Focus (brand color lives on interactive states) ── */
+/* ── Focus (pop color on interactive states) ── */
 :focus-visible {
-  outline: 2px solid var(--color-plum-500);
+  outline: 2px solid var(--color-orange-500);
   outline-offset: 2px;
 }
 
@@ -175,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .glass-dark {
-  background: rgba(18, 16, 26, 0.85);
+  background: rgba(13, 22, 41, 0.85);
   backdrop-filter: blur(24px) saturate(1.2);
   -webkit-backdrop-filter: blur(24px) saturate(1.2);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -217,39 +216,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-plum-600), var(--color-plum-500), var(--color-plum-400));
+  background: linear-gradient(135deg, var(--color-orange-700), var(--color-orange-600));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-plum {
-  background: linear-gradient(135deg, var(--color-plum-500) 0%, var(--color-plum-300) 100%);
+.text-gradient-navy {
+  background: linear-gradient(135deg, var(--color-navy-700) 0%, var(--color-navy-500) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-gradient-hero {
-  background: linear-gradient(145deg, var(--color-cream-100) 0%, var(--color-plum-50) 40%, var(--color-cream-200) 100%);
+  background: linear-gradient(145deg, var(--color-cream-100) 0%, var(--color-navy-50) 40%, var(--color-cream-200) 70%, var(--color-orange-50) 100%);
 }
 
-/* Both stop at plum-500 so white text stays at 6:1+ contrast (plum-400 was 3.3:1) */
 .bg-gradient-cta {
-  background: linear-gradient(135deg, var(--color-plum-600) 0%, var(--color-plum-500) 100%);
+  background: linear-gradient(135deg, var(--color-navy-900) 0%, var(--color-navy-700) 100%);
 }
 
 .bg-gradient-button {
-  background: linear-gradient(135deg, var(--color-plum-600) 0%, var(--color-plum-500) 100%);
+  background: linear-gradient(135deg, var(--color-navy-600) 0%, var(--color-navy-500) 50%, var(--color-navy-400) 100%);
 }
 
-.bg-gradient-gold {
-  background: linear-gradient(135deg, var(--color-gold-400) 0%, var(--color-gold-500) 100%);
-}
-
-/* The "press me" / attention color: charcoal text on this is 8.5-10:1 */
-.bg-gradient-pop {
-  background: linear-gradient(135deg, var(--color-gold-400) 0%, var(--color-gold-500) 100%);
+.bg-gradient-orange {
+  background: linear-gradient(135deg, var(--color-orange-400) 0%, var(--color-orange-500) 100%);
 }
 
 .border-gradient {
@@ -262,7 +255,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: -2px;
   border-radius: inherit;
-  background: linear-gradient(135deg, var(--color-plum-400), var(--color-gold-400));
+  background: linear-gradient(135deg, var(--color-navy-400), var(--color-orange-400));
   z-index: -1;
 }
 
@@ -291,12 +284,12 @@ select {
 }
 
 .input-premium:hover {
-  border-color: var(--color-plum-200);
+  border-color: var(--color-navy-200);
 }
 
 .input-premium:focus {
-  border-color: var(--color-plum-400);
-  box-shadow: 0 0 0 3px rgba(108, 60, 225, 0.1);
+  border-color: var(--color-orange-500);
+  box-shadow: 0 0 0 3px rgba(240, 114, 31, 0.15);
   background: white;
 }
 
