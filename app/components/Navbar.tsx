@@ -58,7 +58,7 @@ const Navbar = () => {
                 href={item.href}
                 className={`relative px-4 py-2 text-sm font-medium rounded-xl transition-all duration-200 ${
                   pathname === item.href
-                    ? 'text-plum-600 bg-plum-50'
+                    ? 'text-navy-600 bg-navy-50'
                     : 'text-charcoal-500 hover:text-charcoal-900 hover:bg-cream-200/60'
                 }`}
               >
@@ -71,7 +71,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/contact?subject=Book%20a%20demo"
-              className="bg-gradient-pop text-charcoal-900 ring-1 ring-inset ring-gold-600/30 px-6 py-2.5 rounded-xl text-sm font-semibold shadow-glow-gold/30 hover:shadow-glow-gold hover:-translate-y-0.5 transition-all duration-300"
+              className="bg-gradient-orange text-charcoal-900 ring-1 ring-inset ring-orange-700/25 px-6 py-2.5 rounded-xl text-sm font-semibold shadow-glow-orange/30 hover:shadow-glow-orange hover:-translate-y-0.5 transition-all duration-300"
             >
               Book a demo
             </Link>
@@ -112,8 +112,8 @@ const Navbar = () => {
                     onClick={() => setIsOpen(false)}
                     className={`block py-3 px-4 rounded-xl font-medium transition-colors ${
                       pathname === item.href
-                        ? 'text-plum-600 bg-plum-50'
-                        : 'text-charcoal-600 hover:text-plum-600 hover:bg-cream-200/40'
+                        ? 'text-navy-600 bg-navy-50'
+                        : 'text-charcoal-600 hover:text-navy-600 hover:bg-cream-200/40'
                     }`}
                   >
                     {item.name}
@@ -124,7 +124,7 @@ const Navbar = () => {
                 <Link
                   href="/contact?subject=Book%20a%20demo"
                   onClick={() => setIsOpen(false)}
-                  className="block bg-gradient-pop text-charcoal-900 ring-1 ring-inset ring-gold-600/30 px-6 py-3.5 rounded-xl text-center font-semibold shadow-glow-gold/30 transition-all duration-300"
+                  className="block bg-gradient-orange text-charcoal-900 ring-1 ring-inset ring-orange-700/25 px-6 py-3.5 rounded-xl text-center font-semibold shadow-glow-orange/30 transition-all duration-300"
                 >
                   Book a demo
                 </Link>
