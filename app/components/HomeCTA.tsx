@@ -9,10 +9,10 @@ export default function HomeCTA() {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="text-center relative overflow-hidden rounded-[2.5rem] bg-gradient-cta p-12 md:p-20 shadow-glow-plum/30"
+      className="text-center relative overflow-hidden rounded-[2.5rem] bg-gradient-cta p-12 md:p-20 shadow-glow-navy/30"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-plum-300),transparent_50%)] opacity-30 pointer-events-none" />
-      <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-plum-400/20 rounded-full blur-[80px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-navy-300),transparent_50%)] opacity-30 pointer-events-none" />
+      <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-navy-400/20 rounded-full blur-[80px] pointer-events-none" />
       <div className="relative z-10 max-w-3xl mx-auto">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5 font-heading tracking-tight leading-tight">
           Ready to modernize your restaurant?

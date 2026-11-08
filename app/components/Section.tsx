@@ -11,7 +11,7 @@ const Section = ({ children, className = '', background = 'white', id }: Section
   const backgrounds = {
     white: 'bg-white',
     gray: 'bg-cream-200/60',
-    'primary-light': 'bg-plum-50/50',
+    'primary-light': 'bg-navy-50/50',
     ivory: 'bg-cream-100',
   };
 

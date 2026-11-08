@@ -19,7 +19,7 @@ export default function PricingToggle({ isAnnual, onToggle }: PricingToggleProps
         aria-label={isAnnual ? 'Switch to monthly pricing' : 'Switch to annual pricing'}
       >
         <motion.div
-          className="absolute top-1 w-6 h-6 bg-plum-600 rounded-full shadow-soft"
+          className="absolute top-1 w-6 h-6 bg-navy-600 rounded-full shadow-soft"
           animate={{ x: isAnnual ? 32 : 4 }}
           transition={{ type: 'spring', stiffness: 500, damping: 30 }}
         />
